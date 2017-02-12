@@ -30,7 +30,9 @@ var grumbling_commons = [
 	new Card("PBArbor Elf", 1, "G", "Creature", "C"),
 ];
 var grumbling_uncommons = [
-	new Card("Forty", 1, "", "Artifact", "U")
+	new Card("Bubbling Stout", 1, "", "Artifact", "U"),
+	new Card("Forty", 1, "", "Artifact", "U"),
+	new Card("Non Alcoholic Beer", 1, "", "Artifact", "U")
 ];
                    
                    

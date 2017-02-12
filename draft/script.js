@@ -34,6 +34,9 @@ var grumbling_uncommons = [
 	new Card("Forty", 1, "", "Artifact", "U"),
 	new Card("Non Alcoholic Beer", 1, "", "Artifact", "U")
 ];
+var grumbling_rares = [
+	new Card("Steve Ballmer Executive", 3, "M", "Creature", "R")
+]
                    
                    
 var draftTypeChosen = [];
@@ -55,18 +58,21 @@ function makeRelativeImageTag(card, left, top) {
 }
 
 function grumbling_pack() {
-	return generatePack(grumbling_commons, grumbling_uncommons, grumbling_commons);
+	return generatePack(grumbling_rares, grumbling_uncommons, grumbling_commons);
 }
 
 function generatePack(rares, uncommons, commons) {
     var pack = [];
 	
-	for(var i = 0; i < 3; i++) {
+	var rare_r = Math.floor(Math.random() * rares.length);
+	pack.push(rares[rare_r]);
+	
+	for (var i = 0; i < 3; i++) {
 		var r = Math.floor(Math.random() * uncommons.length);
 		pack.push(uncommons[r]);
 	}
 	
-	for(var i = 0; i < 10; i++) {
+	for (var i = 0; i < 10; i++) {
 		var r = Math.floor(Math.random() * commons.length);
 		pack.push(commons[r]);
 	}

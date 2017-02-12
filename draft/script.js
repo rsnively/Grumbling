@@ -24,9 +24,13 @@ function Card(name, manaCost, color, type, rarity) {
 // Arrays for holding all of the card names.
 
 var grumbling_commons = [
+	new Card("AA Member", 1, "W", "Creature", "C"),
 	new Card("Beer", 1, "", "Artifact", "C"),
 	new Card("Mogg Drunkies", 2, "R", "Creature", "C"),
 	new Card("PBArbor Elf", 1, "G", "Creature", "C"),
+];
+var grumbling_uncommons = [
+	new Card("Forty", 1, "", "Artifact", "U")
 ];
                    
                    
@@ -49,13 +53,18 @@ function makeRelativeImageTag(card, left, top) {
 }
 
 function grumbling_pack() {
-	return generatePack(grumbling_commons, grumbling_commons, grumbling_commons, grumbling_commons);
+	return generatePack(grumbling_commons, grumbling_uncommons, grumbling_commons);
 }
 
-function generatePack(mythics, rares, uncommons, commons) {
+function generatePack(rares, uncommons, commons) {
     var pack = [];
 	
-	for(var i = 0; i < 15; i++) {
+	for(var i = 0; i < 3; i++) {
+		var r = Math.floor(Math.random() * uncommons.length);
+		pack.push(uncommons[r]);
+	}
+	
+	for(var i = 0; i < 10; i++) {
 		var r = Math.floor(Math.random() * commons.length);
 		pack.push(commons[r]);
 	}

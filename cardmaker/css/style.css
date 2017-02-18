@@ -1,0 +1,85 @@
+
+@font-face {
+    font-family: "Beleren Bold";
+    src: url(../fonts/beleren-bold_P1.01.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "MPlantin Italic";
+    src: url(../fonts/mplanti3.ttf) format("truetype");
+}
+
+.background {
+	position: absolute;
+}
+
+.card {
+	position: relative;
+	height: 327px;
+	width: 234px;
+}
+
+.cardart {
+	position: absolute;
+	left: 9%;
+	top: 12%;
+	z-index: 1;
+}
+
+.cardname {
+	position: absolute;
+	left: 10%;
+	top: 6%;
+	z-index: 1;
+	font-family: "Beleren Bold", arial, serif;
+	font-size: 12px;
+}
+
+.cardtext {
+	position: absolute;
+	left: 10%;
+	top: 65%;
+	z-index: 1;
+	width: 81%;
+	font-family: "MPlantin", arial, serif;
+	font-size: 10.8px;
+}
+
+.cardtype {
+	position: absolute;
+
+	left: 10%;
+	top: 57%;
+	z-index: 1;
+	font-family: "Beleren Bold", arial, serif;
+	font-size: 10.5px;
+}
+
+.mana0 {
+	position: absolute;
+	z-index: 1;
+	
+	right:8.5%;
+	top: 6.3%;
+	
+	font-size: 9px;
+}
+
+.mana1 {
+	position: absolute;
+	z-index: 1;
+	
+	right:14.2%;
+	top: 6.3%;
+	
+	font-size: 9px;
+}
+
+.powertoughness {
+	position: absolute;
+	right: 12%;
+	top: 89.5%;
+	z-index: 1;
+	font-family: "Beleren Bold", arial, serif;
+	font-size: 13.5px;
+}

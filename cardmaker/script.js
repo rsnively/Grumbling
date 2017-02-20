@@ -163,7 +163,7 @@ var Shocktop = {
 	types: ["Instant"],
 	rarity: "C",
 	rules: "Shocktop deals 2 damage to target creature or player. Target player drinks 1."
-}
+};
 var TheWheel = {
 	name: "The Wheel",
 	cost: "5",
@@ -189,7 +189,32 @@ var YokedCrab = {
 	toughness: 4
 };
 
+var allcards = [
+	AAMember,
+	Beer,
+	BeerBong,
+	Beerbear,
+	BigBird,
+	BigSlurp,
+	Brid,
+	BubblingStout,
+	DiligentBouncer,
+	DrinkAlone,
+	Forty,
+	MonkBrewedIPA,
+	LightBeer,
+	MoggDrunkies,
+	NonAlcoholicBeer,
+	PartyStarter,
+	PBArborElf,
+	Shocktop,
+	TheWheel,
+	WizardsStaff,
+	YokedCrab
+];
+
 function GetColor(card) {
+	console.log(card.cost);
 	var w = card.cost.includes("W");
 	var u = card.cost.includes("U");
 	var b = card.cost.includes("B");
@@ -308,29 +333,11 @@ function GetCard$(card) {
 }
 
 function main() {
-	$("body").html(
-		GetCard$(AAMember) +
-		GetCard$(Beer) +
-		GetCard$(BeerBong) +
-		GetCard$(Beerbear) +
-		GetCard$(BigBird) +
-		GetCard$(BigSlurp) +
-		GetCard$(Brid) +
-		GetCard$(BubblingStout) +
-		GetCard$(DiligentBouncer) +
-		GetCard$(DrinkAlone) +
-		GetCard$(Forty) +
-		GetCard$(MonkBrewedIPA) +
-		GetCard$(LightBeer) +
-		GetCard$(MoggDrunkies) +
-		GetCard$(NonAlcoholicBeer) +
-		GetCard$(PartyStarter) +
-		GetCard$(PBArborElf) +
-		GetCard$(Shocktop) +
-		GetCard$(TheWheel) +
-		GetCard$(WizardsStaff) +
-		GetCard$(YokedCrab)
-	);
+	var cards$ = "";
+	for (var c = 0; c < allcards.length; c++) {
+		cards$ += GetCard$(allcards[c]);
+	}
+	$("body").html(cards$);
 }
 
 $(document).ready(main);

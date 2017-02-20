@@ -9,6 +9,10 @@
     src: url(../fonts/mplanti3.ttf) format("truetype");
 }
 
+@media print {
+	body { -webkit-print-color-adjust: exact; }
+}
+
 body {
 	display: flex;
 	flex-wrap: wrap;

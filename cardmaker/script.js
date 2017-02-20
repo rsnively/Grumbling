@@ -164,6 +164,13 @@ var Shocktop = {
 	rarity: "C",
 	rules: "Shocktop deals 2 damage to target creature or player. Target player drinks 1."
 };
+var SulbeericVortex = {
+	name: "Sulbeeric Vortex",
+	cost: "1RR",
+	types: ["Enchantment"],
+	rarity: "U",
+	rules: "At the beginning of each player's upkeep, that player loses 2 life and drinks 1."
+};
 var TheWheel = {
 	name: "The Wheel",
 	cost: "5",
@@ -208,6 +215,7 @@ var allcards = [
 	PartyStarter,
 	PBArborElf,
 	Shocktop,
+	SulbeericVortex,
 	TheWheel,
 	WizardsStaff,
 	YokedCrab

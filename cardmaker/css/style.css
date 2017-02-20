@@ -83,20 +83,24 @@ br {
 .mana0 {
 	position: absolute;
 	z-index: 1;
-	
 	right:8.5%;
 	top: 6.3%;
-	
 	font-size: 9px;
 }
 
 .mana1 {
 	position: absolute;
 	z-index: 1;
-	
 	right:14.2%;
 	top: 6.3%;
-	
+	font-size: 9px;
+}
+
+.mana2 {
+	position: absolute;
+	z-index: 1;
+	right: 19.9%;
+	top: 6.3%;
 	font-size: 9px;
 }
 

@@ -238,11 +238,13 @@ function GetCostSymbol$(symbol, index) {
 }
 
 function GetManaSymbol$(color) {
-		return "<span class='ms ms-" + color.toLowerCase() + " ms-cost' style='font-size: 9px'></span>";
+	var fontsize = cardHeight * 0.028;
+	return "<span class='ms ms-" + color.toLowerCase() + " ms-cost' style='font-size: " + fontsize + "px'></span>";
 }
 
 function GetTapSymbol$() {
-	return "<span class='ms ms-cost ms-tap' style='font-size: 9px'></span>";
+	var fontsize = cardHeight * 0.028;
+	return "<span class='ms ms-cost ms-tap' style='font-size: " + fontsize + "px'></span>";
 }
 
 function GetManaCost$(card) {
@@ -269,8 +271,15 @@ function GetCardType$(card) {
 }
 
 function GetCardRarity$(card) {
-	return "<div class='rarity rarity-base rarity-" + card.rarity + "'></div>" +
-		   "<div class='rarity rarity-top rarity-" + card.rarity + "'></div>";
+	var r = "";
+	if (card.rarity == "C") r = "common";
+	else if (card.rarity == "U") r = "uncommon";
+	else r ="rare";
+	
+	var height = cardHeight * 0.04;
+	var width = cardWidth * 0.04;
+	
+	return "<img class='rarity' src='../img/cardmaker/rarity_" + r + ".png' width=" + width + " height=" + height + " />";
 }
 
 function GetCardText$(card) {

@@ -171,11 +171,19 @@ var TheWheel = {
 	rarity: "R",
 	rules: "At the beginning of your upkeep, you may pay " + GetManaSymbol$("W") + GetManaSymbol$("U") + GetManaSymbol$("B") + GetManaSymbol$("R") + GetManaSymbol$("G") + ". If you do, target player takes a shot."
 };
+var WizardsStaff = {
+	name: "Wizard&#39;s Staff",
+	cost: "3",
+	types: ["Artifact"],
+	rarity: "R",
+	rules: GetTapSymbol$() + ", Shotgun a beer: Put a drink counter on Wizard's Staff.<br>" + GetTapSymbol$() + ": Gain control of target creature with converted mana cost less than or equal to the number of drink counters on Wizard's Staff."
+};
 var YokedCrab = {
 	name: "Yoked Crab",
 	cost: "2U",
 	types: ["Creature"],
 	subtypes: ["Crab"],
+	rarity: "C",
 	flavor: "\"Dude. Crab's yoked.\"",
 	power: 1,
 	toughness: 4
@@ -311,6 +319,7 @@ function main() {
 		GetCard$(PBArborElf) +
 		GetCard$(Shocktop) +
 		GetCard$(TheWheel) +
+		GetCard$(WizardsStaff) +
 		GetCard$(YokedCrab)
 	);
 }

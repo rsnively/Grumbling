@@ -25,6 +25,51 @@ var Beer = {
 	rules: GetTapSymbol$() + ": Drink 1.",
 	flavor: "\"Yep.\""
 };
+var BeerBong = {
+	name: "Beer Bong",
+	cost: "3",
+	types: ["Artifact"],
+	subtypes: ["Equipment"],
+	rarity: "R",
+	rules: "Equipped creature gets shotguntouch. <span class='reminder'>(When this creature deals damage to a player, that player shotguns a beer.)</span><br>Equip " + GetManaSymbol$("4")
+};
+var Beerbear = {
+	name: "Beerbear",
+	cost: "1G",
+	types: ["Creature"],
+	subtypes: ["Drunk", "Bear"],
+	rarity: "C",
+	rules: GetManaSymbol$("1") + GetManaSymbol$("G") + ", Drink 1: Beerbear gets +2/+2 until end of turn. Activate this ability only once each turn.",
+	power: 2,
+	toughness: 2
+}
+var BigBird = {
+	name: "Big Bird",
+	cost: "4W",
+	types: ["Creature"],
+	subtypes: ["Sober", "Bird"],
+	rarity: "C",
+	rules: "Flying, vigilance<br>Whenever Big Bird attacks, Abstain 1. <span class='reminder'>(Prevent the next 1 drink that would be dealt to you this turn.)</span>",
+	power: 3,
+	toughness: 3
+};
+var BigSlurp = {
+	name: "Big Slurp",
+	cost: "3R",
+	types: ["Sorcery"],
+	rarity: "C",
+	rules: "Big slurp deals 4 damage to target player. That player drinks 4."
+};
+var Brid = {
+	name: "Brid",
+	cost: "2W",
+	types: ["Creature"],
+	subtypes: ["Bird"],
+	rarity: "C",
+	rules: "Flying",
+	power: 2,
+	toughness: 2
+};
 var BubblingStout = {
 	name: "Bubbling Stout",
 	cost: "1",
@@ -33,14 +78,39 @@ var BubblingStout = {
 	rarity: "U",
 	rules: GetTapSymbol$() + ", " + GetManaSymbol$("1") + GetManaSymbol$("B") + ": Each player loses X life and you gain X life, where X is the number of Beers you control."
 };
+var DiligentBouncer = {
+	name: "Diligent Bouncer",
+	cost: "2W",
+	types: ["Creature"],
+	subtypes: ["Sober", "Human"],
+	rarity: "C",
+	rules: "Flash<br>When Diligent Bouncer enters the battlefield, Abstain 1. <span class='reminder'>(Prevent the next 1 drink that would be dealt to you this turn.)</span>",
+	power: 1,
+	toughness: 4
+};
+var DrinkAlone = {
+	name: "Drink Alone",
+	cost: "1B",
+	types: ["Sorcery"],
+	rarity: "C",
+	rules: "Target player draws 2 cards, loses 2 life, and drinks 2."
+};
 var Forty = {
 	name: "Forty",
 	cost: "1",
 	types: ["Artifact"],
 	subtypes: ["Beer"],
 	rarity: "U",
-	rules: GetTapSymbol$() + ", " + GetManaSymbol$("1") + GetManaSymbol$("R") + ": Each player drinks X, where X is the number of Beers you control.",
+	rules: GetTapSymbol$() + ", " + GetManaSymbol$("1") + GetManaSymbol$("R") + ": Each player drinks X, where X is the number of Beers you control."
 };
+var LightBeer = {
+	name: "Light Beer",
+	cost: "1",
+	types: ["Artifact"],
+	subtypes: ["Beer"],
+	rarity: "U",
+	rules: GetTapSymbol$() + ", "  + GetManaSymbol$("1") + GetManaSymbol$("G") + ": Target creature gets +X/+X until end of turn, where X is the number of Beers you control."
+}
 var MoggDrunkies = {
 	name: "Mogg Drunkies",
 	cost: "1R",
@@ -51,6 +121,14 @@ var MoggDrunkies = {
 	power: 3,
 	toughness: 3
 };
+var MonkBrewedIPA = {
+	name: "Monk-Brewed IPA",
+	cost: "1",
+	types: ["Artifact"],
+	subtypes: ["Beer"],
+	rarity: "U",
+	rules: GetTapSymbol$() + ", "  + GetManaSymbol$("1") + GetManaSymbol$("U") + ": Scry X, where X is the number of Beers you control."
+};
 var NonAlcoholicBeer = {
 	name: "Non-Alcoholic Beer",
 	cost: "1",
@@ -58,6 +136,16 @@ var NonAlcoholicBeer = {
 	subtypes: ["Beer"],
 	rarity: "U",
 	rules: GetTapSymbol$() + ", " + GetManaSymbol$("1") + GetManaSymbol$("W") + ": Abstain X, where X is the number of Beers you control. <span class='reminder'>(Prevent the next X drinks that would be dealt to you this turn.)</span>"
+};
+var PartyStarter = {
+	name: "Party Starter",
+	cost: "1R",
+	types: ["Creature"],
+	subtypes: ["Human", "Rogue"],
+	rarity: "U",
+	rules: "Haste<br>When Party Starter enters the battlefield, each player Drinks 1.",
+	power: 2,
+	toughness: 1
 };
 var PBArborElf = {
 	name: "PBArbor Elf",
@@ -68,6 +156,20 @@ var PBArborElf = {
 	rules: GetTapSymbol$() + ": Add " + GetManaSymbol$("G") + " to your mana pool.",
 	power: 1,
 	toughness: 1
+};
+var Shocktop = {
+	name: "Shocktop",
+	cost: "R",
+	types: ["Instant"],
+	rarity: "C",
+	rules: "Shocktop deals 2 damage to target creature or player. Target player drinks 1."
+}
+var TheWheel = {
+	name: "The Wheel",
+	cost: "5",
+	types: ["Artifact"],
+	rarity: "R",
+	rules: "At the beginning of your upkeep, you may pay " + GetManaSymbol$("W") + GetManaSymbol$("U") + GetManaSymbol$("B") + GetManaSymbol$("R") + GetManaSymbol$("G") + ". If you do, target player takes a shot."
 };
 var YokedCrab = {
 	name: "Yoked Crab",
@@ -132,7 +234,7 @@ function GetManaSymbol$(color) {
 }
 
 function GetTapSymbol$() {
-	return "<span class='ms ms-cost ms-tap' style='font-size: 9x'></span>";
+	return "<span class='ms ms-cost ms-tap' style='font-size: 9px'></span>";
 }
 
 function GetManaCost$(card) {
@@ -150,11 +252,17 @@ function GetCardType$(card) {
 	var typeline$ = "<span class='cardtype'>";
 	for (var t in card.types)
 		typeline$ += card.types[t] + " ";
-	if (card.subtypes.length > 0)
+	if (card.subtypes != undefined) {
 		typeline$ += "&mdash; ";
-	for (var s in card.subtypes)
-		typeline$ += card.subtypes[s] + " ";
+		for (var s in card.subtypes)
+			typeline$ += card.subtypes[s] + " ";
+	}
 	return typeline$ + "</span>";
+}
+
+function GetCardRarity$(card) {
+	return "<div class='rarity rarity-base rarity-" + card.rarity + "'></div>" +
+		   "<div class='rarity rarity-top rarity-" + card.rarity + "'></div>";
 }
 
 function GetCardText$(card) {
@@ -176,6 +284,7 @@ function GetCard$(card) {
 		GetManaCost$(card) +
 		GetCardArt$(card) +
 		GetCardType$(card) +
+		GetCardRarity$(card) +
 		GetCardText$(card) +
 		GetPT$(card) +
 		"</div>";
@@ -185,11 +294,23 @@ function main() {
 	$("body").html(
 		GetCard$(AAMember) +
 		GetCard$(Beer) +
+		GetCard$(BeerBong) +
+		GetCard$(Beerbear) +
+		GetCard$(BigBird) +
+		GetCard$(BigSlurp) +
+		GetCard$(Brid) +
 		GetCard$(BubblingStout) +
+		GetCard$(DiligentBouncer) +
+		GetCard$(DrinkAlone) +
 		GetCard$(Forty) +
+		GetCard$(MonkBrewedIPA) +
+		GetCard$(LightBeer) +
 		GetCard$(MoggDrunkies) +
 		GetCard$(NonAlcoholicBeer) +
+		GetCard$(PartyStarter) +
 		GetCard$(PBArborElf) +
+		GetCard$(Shocktop) +
+		GetCard$(TheWheel) +
 		GetCard$(YokedCrab)
 	);
 }

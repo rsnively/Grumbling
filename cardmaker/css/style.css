@@ -15,6 +15,10 @@ body {
 	width: 100%;
 }
 
+br {
+	line-height: 150%;
+}
+
 .background {
 	position: absolute;
 }
@@ -99,6 +103,48 @@ body {
 	z-index: 1;
 	font-family: "Beleren Bold", arial, serif;
 	font-size: 13.5px;
+}
+
+.rarity {
+	position: absolute;
+	z-index: 1;
+}
+
+.rarity-base {
+	right: 10%;
+	top: 58%;
+	height: 9px;
+	width: 5px;
+	border-radius: 2px;
+	border-width: 0px 1px 1px 1px;
+	border-style: solid;
+}
+
+.rarity-top {
+	right: 10%;
+	top:57.8%;
+	width: 5px;
+	height: 2px;
+	-moz-border-radius: 500px / 200px;
+	-webkit-border-radius: 500px / 200px;
+	border-radius: 5px;
+	border: 1px solid black;
+	
+}
+
+.rarity-C {
+	background: black;
+	border-color: white;
+}
+
+.rarity-U {
+	background: gray;
+	border-color: black;
+}
+
+.rarity-R {
+	background: gold;
+	border-color: black;
 }
 
 .reminder {

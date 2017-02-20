@@ -42,7 +42,7 @@ var Beerbear = {
 	rules: GetManaSymbol$("1") + GetManaSymbol$("G") + ", Drink 1: Beerbear gets +2/+2 until end of turn. Activate this ability only once each turn.",
 	power: 2,
 	toughness: 2
-}
+};
 var BigBird = {
 	name: "Big Bird",
 	cost: "4W",
@@ -59,6 +59,13 @@ var BigSlurp = {
 	types: ["Sorcery"],
 	rarity: "C",
 	rules: "Big slurp deals 4 damage to target player. That player drinks 4."
+};
+var BoomRoasted = {
+	name: "Boom! Roasted",
+	cost: "1R",
+	types: ["Sorcery"],
+	rarity: "C",
+	rules: "Boom! Roasted deals 5 damage to target non-drunk creature."
 };
 var Brid = {
 	name: "Brid",
@@ -102,6 +109,26 @@ var Forty = {
 	subtypes: ["Beer"],
 	rarity: "U",
 	rules: GetTapSymbol$() + ", " + GetManaSymbol$("1") + GetManaSymbol$("R") + ": Each player drinks X, where X is the number of Beers you control."
+};
+var GoblinBarsonist = {
+	name: "Goblin Barsonist",
+	cost: "R",
+	types: ["Creature"],
+	subtypes: ["Goblin"],
+	rarity: "C",
+	rules: "When Goblin Barsonist dies, it deals 1 drink to target player.",
+	power: 1,
+	toughness: 1
+};
+var GoblinDrinkslinger = {
+	name: "Goblin Drinkslinger",
+	cost: "2R",
+	types: ["Creature"],
+	subtypes: ["Goblin", "Bartender"],
+	rarity: "C",
+	rules: GetTapSymbol$() + ": Target player drinks 1.",
+	power: 2,
+	toughness: 2
 };
 var LightBeer = {
 	name: "Light Beer",
@@ -195,6 +222,16 @@ var YokedCrab = {
 	power: 1,
 	toughness: 4
 };
+var YokedIguana = {
+	name: "Yoked Iguana",
+	cost: "3R",
+	types: ["Creature"],
+	subtypes: ["Lizard"],
+	rarity: "C",
+	flavor: "\"Bruh.\"",
+	power: 4,
+	toughness: 2
+};
 
 var allcards = [
 	AAMember,
@@ -203,11 +240,14 @@ var allcards = [
 	Beerbear,
 	BigBird,
 	BigSlurp,
+	BoomRoasted,
 	Brid,
 	BubblingStout,
 	DiligentBouncer,
 	DrinkAlone,
 	Forty,
+	GoblinBarsonist,
+	GoblinDrinkslinger,
 	MonkBrewedIPA,
 	LightBeer,
 	MoggDrunkies,
@@ -218,11 +258,11 @@ var allcards = [
 	SulbeericVortex,
 	TheWheel,
 	WizardsStaff,
-	YokedCrab
+	YokedCrab,
+	YokedIguana
 ];
 
 function GetColor(card) {
-	console.log(card.cost);
 	var w = card.cost.includes("W");
 	var u = card.cost.includes("U");
 	var b = card.cost.includes("B");

@@ -5,13 +5,69 @@ var cardHeight = 327;
 var artWidth = cardWidth * 0.83;
 var artHeight = cardHeight * 0.44;
 
+var AAMember = {
+	name: "AA Member",
+	cost: "W",
+	types: ["Creature"],
+	subtypes: ["Sober", "Human"],
+	rarity: "C",
+	rules: "Sacrifice AA Member: Abstain 1 <span class='reminder'>(Prevent the next 1 drink that would be dealt to you this turn.)</span>",
+	flavor: "The first step towards recovery is having a problem.",
+	power: 1,
+	toughness: 2
+};
 var Beer = {
 	name: "Beer",
 	cost: "1",
 	types: ["Artifact"],
 	subtypes: ["Beer"],
+	rarity: "C",
 	rules: GetTapSymbol$() + ": Drink 1.",
 	flavor: "\"Yep.\""
+};
+var BubblingStout = {
+	name: "Bubbling Stout",
+	cost: "1",
+	types: ["Artifact"],
+	subtypes: ["Beer"],
+	rarity: "U",
+	rules: GetTapSymbol$() + ", " + GetManaSymbol$("1") + GetManaSymbol$("B") + ": Each player loses X life and you gain X life, where X is the number of Beers you control."
+};
+var Forty = {
+	name: "Forty",
+	cost: "1",
+	types: ["Artifact"],
+	subtypes: ["Beer"],
+	rarity: "U",
+	rules: GetTapSymbol$() + ", " + GetManaSymbol$("1") + GetManaSymbol$("R") + ": Each player drinks X, where X is the number of Beers you control.",
+};
+var MoggDrunkies = {
+	name: "Mogg Drunkies",
+	cost: "1R",
+	types: ["Creature"],
+	subtypes: ["Drunk", "Goblin"],
+	rarity: "C",
+	rules: "Mogg Drunkies can't attack or block unless you've taken a drink this turn.",
+	power: 3,
+	toughness: 3
+};
+var NonAlcoholicBeer = {
+	name: "Non-Alcoholic Beer",
+	cost: "1",
+	types: ["Artifact"],
+	subtypes: ["Beer"],
+	rarity: "U",
+	rules: GetTapSymbol$() + ", " + GetManaSymbol$("1") + GetManaSymbol$("W") + ": Abstain X, where X is the number of Beers you control. <span class='reminder'>(Prevent the next X drinks that would be dealt to you this turn.)</span>"
+};
+var PBArborElf = {
+	name: "PBArbor Elf",
+	cost: "G",
+	types: ["Creature"],
+	subtypes: ["Drunk", "Elf"],
+	rarity: "C",
+	rules: GetTapSymbol$() + ": Add " + GetManaSymbol$("G") + " to your mana pool.",
+	power: 1,
+	toughness: 1
 };
 var YokedCrab = {
 	name: "Yoked Crab",
@@ -71,8 +127,12 @@ function GetCostSymbol$(symbol, index) {
 	return "<span class='ms ms-cost ms-" + symbol.toLowerCase() + " ms-shadow mana" + index + "'></span>";
 }
 
+function GetManaSymbol$(color) {
+		return "<span class='ms ms-" + color.toLowerCase() + " ms-cost' style='font-size: 9px'></span>";
+}
+
 function GetTapSymbol$() {
-	return "<span class='ms ms-cost ms-tap'></span>";
+	return "<span class='ms ms-cost ms-tap' style='font-size: 9x'></span>";
 }
 
 function GetManaCost$(card) {
@@ -122,7 +182,16 @@ function GetCard$(card) {
 }
 
 function main() {
-	$("body").html(GetCard$(Beer) + GetCard$(YokedCrab));
+	$("body").html(
+		GetCard$(AAMember) +
+		GetCard$(Beer) +
+		GetCard$(BubblingStout) +
+		GetCard$(Forty) +
+		GetCard$(MoggDrunkies) +
+		GetCard$(NonAlcoholicBeer) +
+		GetCard$(PBArborElf) +
+		GetCard$(YokedCrab)
+	);
 }
 
 $(document).ready(main);

@@ -9,6 +9,12 @@
     src: url(../fonts/mplanti3.ttf) format("truetype");
 }
 
+body {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
 .background {
 	position: absolute;
 }
@@ -29,8 +35,9 @@
 .cardflavor {
 	position: absolute;
 	left: 9%;
-	bottom: 15%;
+	bottom: 13%;
 	z-index: 1;
+	width: 81%;
 	
 	font-family: "MPlantin Italic", arial, serif;
 	font-size: 10.8px;
@@ -92,4 +99,10 @@
 	z-index: 1;
 	font-family: "Beleren Bold", arial, serif;
 	font-size: 13.5px;
+}
+
+.reminder {
+	font-family: "MPlantin Italic", arial, serif;
+	font-style: italic;
+	font-size:10.8px;
 }

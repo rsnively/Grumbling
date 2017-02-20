@@ -5,50 +5,124 @@ var cardHeight = 327;
 var artWidth = cardWidth * 0.83;
 var artHeight = cardHeight * 0.44;
 
-function GetBackground(manaCost, cardType) {
-	// TODO
-	return "<img class='background' src='../img/cardmaker/blue_creature.jpg' width=" + cardWidth + " height=" + cardHeight + " />";
+var Beer = {
+	name: "Beer",
+	cost: "1",
+	types: ["Artifact"],
+	subtypes: ["Beer"],
+	rules: GetTapSymbol$() + ": Drink 1.",
+	flavor: "\"Yep.\""
+};
+var YokedCrab = {
+	name: "Yoked Crab",
+	cost: "2U",
+	types: ["Creature"],
+	subtypes: ["Crab"],
+	flavor: "\"Dude. Crab's yoked.\"",
+	power: 1,
+	toughness: 4
+};
+
+function GetColor(card) {
+	var w = card.cost.includes("W");
+	var u = card.cost.includes("U");
+	var b = card.cost.includes("B");
+	var r = card.cost.includes("R");
+	var g = card.cost.includes("G");
+	
+	if (w + u + b + r + g > 1) return "M";
+	if (w) return "W";
+	if (u) return "U";
+	if (b) return "B";
+	if (r) return "R";
+	if (g) return "G";
+	return "";
 }
 
-function GetCardname(name) {
-	return "<span class='cardname'>" + name + "</span>";
+function GetBackground$(card) {
+	var base = "";
+	var color = GetColor(card);
+	if (card.types.includes("Creature")) {
+		if (color == "W") base = "white_creature";
+		else if (color == "U") base = "blue_creature";
+		else if (color == "B") base = "black_creature";
+		else if (color == "R") base = "red_creature";
+		else if (color == "G") base = "green_creature";
+		else if (color == "M") base = "multicolor_creature";
+		else base = "artifact_creature";
+	}
+	else {
+		if (color == "W") base = "white_noncreature";
+		else if (color == "U") base = "blue_noncreature";
+		else if (color == "B") base = "black_noncreature";
+		else if (color == "R") base = "red_noncreature";
+		else if (color == "G") base = "green_noncreature";
+		else if (color == "M") base = "multicolor_noncreature";
+		else base = "artifact_noncreature";
+	}
+	return "<img class='background' src='../img/cardmaker/" + base + ".jpg' width=" + cardWidth + " height=" + cardHeight + " />";
 }
 
-function GetManaCost(manaCost) {
-	return "<span class='ms ms-cost ms-3 ms-shadow mana1'></span><span class='ms ms-cost ms-u ms-shadow mana0'></span>";
+function GetCardName$(card) {
+	return "<span class='cardname'>" + card.name + "</span>";
 }
 
-function GetCardArt(loc) {
-	return "<img class='cardart' src='" + loc + "' width=" + artWidth + " height=" + artHeight + " />";
+function GetCostSymbol$(symbol, index) {
+	return "<span class='ms ms-cost ms-" + symbol.toLowerCase() + " ms-shadow mana" + index + "'></span>";
 }
 
-function GetCardType(type) {
-	return "<span class='cardtype'>" + type + "</span>";
+function GetTapSymbol$() {
+	return "<span class='ms ms-cost ms-tap'></span>";
 }
 
-function GetCardText(text, flavor) {
-	return "<span class='cardtext'>" + text + "<br><br><span style='font-family: \"MPlantin Italic\" arial serif;'><i>" + flavor + "</i></span></span>";
+function GetManaCost$(card) {
+	var mc$ = "";
+	for (var i = 0; i < card.cost.length; i++)
+		mc$ += GetCostSymbol$(card.cost.charAt(card.cost.length - i - 1), i);
+	return mc$;
 }
 
-function GetPT(power, toughness) {
-	return "<span class='powertoughness'>" + power + "/" + toughness + "</span>";
+function GetCardArt$(card) {
+	return "<img class='cardart' src='../img/art/" + card.name + ".jpg' width=" + artWidth + " height=" + artHeight + " />";
 }
 
-function getCardDiv(name, manaCost, type, power, toughness, text, flavor) {
-	var r = "<div class='card'>"
-	r += GetBackground(manaCost, "todo");
-	r += GetCardname(name);
-	r += GetManaCost(manaCost);
-	r += GetCardArt("../img/cardmaker/arttest.png");
-	r += GetCardType(type);
-	r += GetCardText(text, flavor);
-	r += GetPT(power, toughness);
-	r += "</div>"
-	return r;
+function GetCardType$(card) {
+	var typeline$ = "<span class='cardtype'>";
+	for (var t in card.types)
+		typeline$ += card.types[t] + " ";
+	if (card.subtypes.length > 0)
+		typeline$ += "&mdash; ";
+	for (var s in card.subtypes)
+		typeline$ += card.subtypes[s] + " ";
+	return typeline$ + "</span>";
+}
+
+function GetCardText$(card) {
+	var rules$ = card.rules == undefined ? "" :"<span class='cardtext'>" + card.rules + "</span>";
+	var flavor$ = card.flavor == undefined ? "" : "<span class='cardflavor'><i>" + card.flavor + "</i></span>";
+	return rules$ + flavor$;
+}
+
+function GetPT$(card) {
+	if (!card.types.includes("Creature"))
+		return "";
+	return "<span class='powertoughness'>" + card.power + "/" + card.toughness + "</span>";
+}
+
+function GetCard$(card) {
+	return "<div class='card'>" +
+		GetBackground$(card) +
+		GetCardName$(card) +
+		GetManaCost$(card) +
+		GetCardArt$(card) +
+		GetCardType$(card) +
+		GetCardText$(card) +
+		GetPT$(card) +
+		"</div>";
 }
 
 function main() {
-	$("body").html(getCardDiv("Drownyard Explorers", "3U", "Creature &mdash; Human Wizard", 2, 4, "When Drownyard Explorers enters the battlefield, investigate. <span style='font-family: \"MPlantin Italic\" arial serif;'><i>(Put a colorless Clue artifact token onto the battlefield with \"</i></span><span class='ms ms-cost ms-2 ms-2' style='font-size:7px' /><span style='font-family: \"MPlantin Italic\" arial serif;'><i>, Sacrifice this artifact: Draw a card.\")</i></span>", "\"Angels and inquisitors terrorize villages, but no one seems to notice the stirring out at sea.\""));
+	$("body").html(GetCard$(Beer) + GetCard$(YokedCrab));
 }
 
 $(document).ready(main);

@@ -26,6 +26,16 @@
 	z-index: 1;
 }
 
+.cardflavor {
+	position: absolute;
+	left: 9%;
+	bottom: 15%;
+	z-index: 1;
+	
+	font-family: "MPlantin Italic", arial, serif;
+	font-size: 10.8px;
+}
+
 .cardname {
 	position: absolute;
 	left: 10%;

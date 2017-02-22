@@ -16,6 +16,16 @@ var AAMember = {
 	power: 1,
 	toughness: 2
 };
+var BackalleyBeerman = {
+	name: "Backalley Beerman",
+	cost: "2B",
+	types: ["Creature"],
+	subtypes: ["Drunk", "Rogue"],
+	rarity: "C",
+	rules: "When Backalley Beerman dies, you may drink 1. If you do, put a +1/+1 counter on target creature.",
+	power: 3,
+	toughness: 2
+};
 var Beer = {
 	name: "Beer",
 	cost: "1",
@@ -67,6 +77,16 @@ var BoomRoasted = {
 	rarity: "C",
 	rules: "Boom! Roasted deals 5 damage to target non-drunk creature."
 };
+var BoozeplagueRat = {
+	name: "Boozeplague Rat",
+	cost: "1B",
+	types: ["Creature"],
+	subtypes: ["Drunk", "Rat"],
+	rarity: "C",
+	rules: "Deathtouch</br>Drinktouch <span class='reminder'>(Whenever this creature deals damage to a player, that player drinks 1.)</span>",
+	power: 1,
+	toughness: 1
+};
 var Brid = {
 	name: "Brid",
 	cost: "2W",
@@ -102,6 +122,27 @@ var DrinkAlone = {
 	rarity: "C",
 	rules: "Target player draws 2 cards, loses 2 life, and drinks 2."
 };
+var DrownYourSorrows = {
+	name: "Drown Your Sorrows",
+	cost: "2B",
+	types: ["Sorcery"],
+	rarity: "U",
+	rules: "As an additional cost to cast Drown Your Sorrows, drink X. Target creature gets -X/-X until end of turn.",
+};
+var DrunkenPillaging = {
+	name: "Drunken Pillaging",
+	cost: "R",
+	types: ["Sorcery"],
+	rarity: "C",
+	rules: "Draw two cards, then discard two cards.<br>Flashback " + GetManaSymbol$("2") + GetManaSymbol$("R") + ", Drink 1 <span class='reminder'>(You may cast this card from your graveyard for its flashback cost. Then exile it.)</span>"
+};
+var FinishOff = {
+	name: "Finish Off",
+	cost: "1W",
+	types: ["Instant"],
+	rarity: "C",
+	rules: "Destroy target artifact or enchantment. If it's an untapped beer, you drink 1 and gain 2 lfe.",
+};
 var Forty = {
 	name: "Forty",
 	cost: "1",
@@ -128,6 +169,24 @@ var GoblinDrinkslinger = {
 	rarity: "C",
 	rules: GetTapSymbol$() + ": Target player drinks 1.",
 	power: 2,
+	toughness: 2
+};
+var IgnitionInterlockDevice = {
+	name: "Ignition Interlock Device",
+	cost: "1W",
+	types: ["Enchantment"],
+	subtypes: ["Aura"],
+	rarity: "C",
+	rules: "Enchant creature<br>Enchanted creature can't attack or block if it's controller has taken a drink this turn."
+};
+var InsistentImp = {
+	name: "Insistent Imp",
+	cost: "2R",
+	types: ["Creature"],
+	subtypes: ["Devil"],
+	rarity: "C",
+	rules: "Drinktouch <span class='reminder'>(Whenever this creature deals damage to a player, that player drinks 1.)</span>",
+	power: 3,
 	toughness: 2
 };
 var LightBeer = {
@@ -163,6 +222,16 @@ var NonAlcoholicBeer = {
 	subtypes: ["Beer"],
 	rarity: "U",
 	rules: GetTapSymbol$() + ", " + GetManaSymbol$("1") + GetManaSymbol$("W") + ": Abstain X, where X is the number of Beers you control. <span class='reminder'>(Prevent the next X drinks that would be dealt to you this turn.)</span>"
+};
+var ParoleOfficer = {
+	name: "Parole Officer",
+	cost: "1W",
+	types: ["Creature"],
+	subtypes: ["Sober", "Human"],
+	rarity: "C",
+	rules: "Parole Officer can't be blocked by drunks.",
+	power: 3,
+	toughness: 1
 };
 var PartyStarter = {
 	name: "Party Starter",
@@ -205,6 +274,26 @@ var TheWheel = {
 	rarity: "R",
 	rules: "At the beginning of your upkeep, you may pay " + GetManaSymbol$("W") + GetManaSymbol$("U") + GetManaSymbol$("B") + GetManaSymbol$("R") + GetManaSymbol$("G") + ". If you do, target player takes a shot."
 };
+var ThirstyMarauder = {
+	name: "Thirsty Marauder",
+	cost: "1R",
+	types: ["Creature"],
+	subtypes: ["Drunk", "Warrior"],
+	rarity: "C",
+	rules: "Whenever Thirsty Marauder attacks, you may drink 1. If you do, it gets +2/+0 until end of turn.",
+	power: 1,
+	toughness: 2
+};
+var VampireEnabler = {
+	name: "Vampire Enabler",
+	cost: "1BB",
+	types: ["Creature"],
+	subtypes: ["Vampire"],
+	rarity: "U",
+	rules: "Flying, lifelink<br>Drinktouch <span class='reminder'>(Whenever this creature deals damage to a player, that player drinks 1.)</span>",
+	power: 2,
+	toughness: 3
+};
 var WizardsStaff = {
 	name: "Wizard&#39;s Staff",
 	cost: "3",
@@ -233,30 +322,54 @@ var YokedIguana = {
 	toughness: 2
 };
 
+//Red commons TODO
+// - big creature (4/5 upside for 5?)
+// - good 4 drop (3/3 haste upside?)
+// - combat trick
+// - removal (1 damage drink for additional targets?)
+// - bad sorc cantrip (can't block? tap? untap? haste?)
+// - art/land destruction
+// - threaten
+// - bad aura
+// - artifact
+
+
+
+
 var allcards = [
 	AAMember,
+	BackalleyBeerman,
 	Beer,
 	BeerBong,
 	Beerbear,
 	BigBird,
 	BigSlurp,
 	BoomRoasted,
+	BoozeplagueRat,
 	Brid,
 	BubblingStout,
 	DiligentBouncer,
 	DrinkAlone,
+	DrownYourSorrows,
+	DrunkenPillaging,
+	FinishOff,
 	Forty,
 	GoblinBarsonist,
 	GoblinDrinkslinger,
-	MonkBrewedIPA,
+	IgnitionInterlockDevice,
+	InsistentImp,
 	LightBeer,
 	MoggDrunkies,
+	MonkBrewedIPA,
 	NonAlcoholicBeer,
+	ParoleOfficer,
 	PartyStarter,
 	PBArborElf,
 	Shocktop,
 	SulbeericVortex,
 	TheWheel,
+	ThirstyMarauder,
+	VampireEnabler,
 	WizardsStaff,
 	YokedCrab,
 	YokedIguana
@@ -382,9 +495,34 @@ function GetCard$(card) {
 
 function main() {
 	var cards$ = "";
+	
+	/**
+	// 1 of each card
 	for (var c = 0; c < allcards.length; c++) {
 		cards$ += GetCard$(allcards[c]);
+	}**/
+	
+	// 3 commons, 1 uncommon
+	for (var c = 0; c < allcards.length; c++) {
+		if (GetColor(allcards[c]) != "U" && GetColor(allcards[c]) != "G" && allcards[c].name != "Monk-Brewed IPA" && allcards[c].name != "Light Beer") {
+			if (allcards[c].rarity == "C") {
+				for (var i = 0; i < 3; i++) {
+					if (allcards[c].name == "Finish Off" || allcards[c].name == "Ignition Interlock Device")
+						i++;
+					cards$ += GetCard$(allcards[c]);
+				}
+			}
+			if (allcards[c].name == "Beer") {
+				for (var i = 0; i < 3; i++) {
+					cards$ += GetCard$(allcards[c]);
+				}
+			}
+			else if (allcards[c].rarity == "U") {
+				cards$ += GetCard$(allcards[c]);
+			}
+		}
 	}
+	
 	$("body").html(cards$);
 }
 

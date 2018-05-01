@@ -5,6 +5,17 @@ var cardHeight = 327;
 var artWidth = cardWidth * 0.83;
 var artHeight = cardHeight * 0.44;
 
+var DesignatedDriver = {
+    name: "Designated Driver",
+    cost: "1RW",
+    types: ["Creature"],
+    subtypes: ["Drunk", "Sober", "Human"],
+    rarity: "U",
+    rules: "Whenever Designated Driver attacks, abstain 1 <span class='reminder'>(Prevent the next 1 drink that would be dealt to you this turn.)</span><br>Whenever Designated Driver deals combat damage to an opponent, each player drinks 1.",
+    power: 3,
+    toughness: 3
+}
+
 var AAMember = {
 	name: "AA Member",
 	cost: "W",
@@ -348,6 +359,7 @@ var allcards = [
 	BoozeplagueRat,
 	Brid,
 	BubblingStout,
+    DesignatedDriver,
 	DiligentBouncer,
 	DrinkAlone,
 	DrownYourSorrows,

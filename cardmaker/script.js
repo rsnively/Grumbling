@@ -6,14 +6,14 @@ var artWidth = cardWidth * 0.83;
 var artHeight = cardHeight * 0.44;
 
 var DesignatedDriver = {
-    name: "Designated Driver",
-    cost: "1RW",
-    types: ["Creature"],
-    subtypes: ["Drunk", "Sober", "Human"],
-    rarity: "U",
-    rules: "Whenever Designated Driver attacks, abstain 1 <span class='reminder'>(Prevent the next 1 drink that would be dealt to you this turn.)</span><br>Whenever Designated Driver deals combat damage to an opponent, each player drinks 1.",
-    power: 3,
-    toughness: 3
+	name: "Designated Driver",
+	cost: "1RW",
+	types: ["Creature"],
+	subtypes: ["Drunk", "Sober", "Human"],
+	rarity: "U",
+	rules: "Whenever Designated Driver attacks, abstain 1 <span class='reminder'>(Prevent the next 1 drink that would be dealt to you this turn.)</span><br>Whenever Designated Driver deals combat damage to an opponent, each player drinks 1.",
+	power: 3,
+	toughness: 3
 }
 
 var AAMember = {
@@ -206,7 +206,7 @@ var LightBeer = {
 	types: ["Artifact"],
 	subtypes: ["Beer"],
 	rarity: "U",
-	rules: GetTapSymbol$() + ", "  + GetManaSymbol$("1") + GetManaSymbol$("G") + ": Target creature gets +X/+X until end of turn, where X is the number of Beers you control."
+	rules: GetTapSymbol$() + ", " + GetManaSymbol$("1") + GetManaSymbol$("G") + ": Target creature gets +X/+X until end of turn, where X is the number of Beers you control."
 }
 var MoggDrunkies = {
 	name: "Mogg Drunkies",
@@ -224,7 +224,7 @@ var MonkBrewedIPA = {
 	types: ["Artifact"],
 	subtypes: ["Beer"],
 	rarity: "U",
-	rules: GetTapSymbol$() + ", "  + GetManaSymbol$("1") + GetManaSymbol$("U") + ": Scry X, where X is the number of Beers you control."
+	rules: GetTapSymbol$() + ", " + GetManaSymbol$("1") + GetManaSymbol$("U") + ": Scry X, where X is the number of Beers you control."
 };
 var NonAlcoholicBeer = {
 	name: "Non-Alcoholic Beer",
@@ -348,43 +348,12 @@ var YokedIguana = {
 
 
 var allcards = [
-	AAMember,
-	BackalleyBeerman,
-	Beer,
-	BeerBong,
-	Beerbear,
-	BigBird,
-	BigSlurp,
-	BoomRoasted,
-	BoozeplagueRat,
-	Brid,
-	BubblingStout,
-    DesignatedDriver,
-	DiligentBouncer,
-	DrinkAlone,
-	DrownYourSorrows,
-	DrunkenPillaging,
-	FinishOff,
-	Forty,
-	GoblinBarsonist,
-	GoblinDrinkslinger,
-	IgnitionInterlockDevice,
-	InsistentImp,
-	LightBeer,
-	MoggDrunkies,
-	MonkBrewedIPA,
-	NonAlcoholicBeer,
-	ParoleOfficer,
-	PartyStarter,
-	PBArborElf,
-	Shocktop,
-	SulbeericVortex,
-	TheWheel,
-	ThirstyMarauder,
-	VampireEnabler,
-	WizardsStaff,
-	YokedCrab,
-	YokedIguana
+	WC01, WC02, WC03, WC04, WC05, WC06, WC07, WC08, WC09, WC10, WC11, WC12, WC13, WC14, WC15, WC16, WC17, WC18, WC19, WC20,
+	UC01, UC02, UC03, UC04, UC05, UC06, UC07, UC08, UC09, UC10, UC11, UC12, UC13, UC14, UC15, UC16, UC17, UC18, UC19, UC20,
+	BC01, BC02, BC03, BC04, BC05, BC06, BC07, BC08, BC09, BC10, BC11, BC12, BC13, BC14, BC15, BC16, BC17, BC18, BC19, BC20,
+	RC01, RC02, RC03, RC04, RC05, RC06, RC07, RC08, RC09, RC10, RC11, RC12, RC13, RC14, RC15, RC16, RC17, RC18, RC19, RC20,
+	GC01, GC02, GC03, GC04, GC05, GC06, GC07, GC08, GC09, GC10, GC11, GC12, GC13, GC14, GC15, GC16, GC17, GC18, GC19, GC20,
+	AC01, AC02, AC03, AC04, AC05,
 ];
 
 function GetColor(card) {
@@ -393,7 +362,7 @@ function GetColor(card) {
 	var b = card.cost.includes("B");
 	var r = card.cost.includes("R");
 	var g = card.cost.includes("G");
-	
+
 	if (w + u + b + r + g > 1) return "M";
 	if (w) return "W";
 	if (u) return "U";
@@ -472,16 +441,16 @@ function GetCardRarity$(card) {
 	var r = "";
 	if (card.rarity == "C") r = "common";
 	else if (card.rarity == "U") r = "uncommon";
-	else r ="rare";
-	
+	else r = "rare";
+
 	var height = cardHeight * 0.04;
 	var width = cardWidth * 0.04;
-	
+
 	return "<img class='rarity' src='../img/cardmaker/rarity_" + r + ".png' width=" + width + " height=" + height + " />";
 }
 
 function GetCardText$(card) {
-	var rules$ = card.rules == undefined ? "" :"<span class='cardtext'>" + card.rules + "</span>";
+	var rules$ = card.rules == undefined ? "" : "<span class='cardtext'>" + card.rules + "</span>";
 	var flavor$ = card.flavor == undefined ? "" : "<span class='cardflavor'><i>" + card.flavor + "</i></span>";
 	return rules$ + flavor$;
 }
@@ -507,34 +476,33 @@ function GetCard$(card) {
 
 function main() {
 	var cards$ = "";
-	
-	/**
+
 	// 1 of each card
 	for (var c = 0; c < allcards.length; c++) {
 		cards$ += GetCard$(allcards[c]);
-	}**/
-	
-	// 3 commons, 1 uncommon
-	for (var c = 0; c < allcards.length; c++) {
-		if (GetColor(allcards[c]) != "U" && GetColor(allcards[c]) != "G" && allcards[c].name != "Monk-Brewed IPA" && allcards[c].name != "Light Beer") {
-			if (allcards[c].rarity == "C") {
-				for (var i = 0; i < 3; i++) {
-					if (allcards[c].name == "Finish Off" || allcards[c].name == "Ignition Interlock Device")
-						i++;
-					cards$ += GetCard$(allcards[c]);
-				}
-			}
-			if (allcards[c].name == "Beer") {
-				for (var i = 0; i < 3; i++) {
-					cards$ += GetCard$(allcards[c]);
-				}
-			}
-			else if (allcards[c].rarity == "U") {
-				cards$ += GetCard$(allcards[c]);
-			}
-		}
 	}
-	
+
+	// 3 commons, 1 uncommon
+	// for (var c = 0; c < allcards.length; c++) {
+	// 	if (GetColor(allcards[c]) != "U" && GetColor(allcards[c]) != "G" && allcards[c].name != "Monk-Brewed IPA" && allcards[c].name != "Light Beer") {
+	// 		if (allcards[c].rarity == "C") {
+	// 			for (var i = 0; i < 3; i++) {
+	// 				if (allcards[c].name == "Finish Off" || allcards[c].name == "Ignition Interlock Device")
+	// 					i++;
+	// 				cards$ += GetCard$(allcards[c]);
+	// 			}
+	// 		}
+	// 		if (allcards[c].name == "Beer") {
+	// 			for (var i = 0; i < 3; i++) {
+	// 				cards$ += GetCard$(allcards[c]);
+	// 			}
+	// 		}
+	// 		else if (allcards[c].rarity == "U") {
+	// 			cards$ += GetCard$(allcards[c]);
+	// 		}
+	// 	}
+	// }
+
 	$("body").html(cards$);
 }
 

@@ -1,5 +1,5 @@
 var BC01 = {
-    name: "creature",
+    name: "creature, tiny, lifegain",
     cost: "B",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -10,7 +10,7 @@ var BC01 = {
     toughness: 0
 };
 var BC02 = {
-    name: "creature",
+    name: "creature, small",
     cost: "B",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -21,7 +21,7 @@ var BC02 = {
     toughness: 0
 };
 var BC03 = {
-    name: "creature",
+    name: "creature, small, lifegain",
     cost: "B",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -32,7 +32,7 @@ var BC03 = {
     toughness: 0
 };
 var BC04 = {
-    name: "creature",
+    name: "creature, small",
     cost: "B",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -43,7 +43,7 @@ var BC04 = {
     toughness: 0
 };
 var BC05 = {
-    name: "creature",
+    name: "creature, medium-small",
     cost: "B",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -54,7 +54,7 @@ var BC05 = {
     toughness: 0
 };
 var BC06 = {
-    name: "creature",
+    name: "creature, medium-small, flying",
     cost: "B",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -65,7 +65,7 @@ var BC06 = {
     toughness: 0
 };
 var BC07 = {
-    name: "creature",
+    name: "creature, medium",
     cost: "B",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -76,7 +76,7 @@ var BC07 = {
     toughness: 0
 };
 var BC08 = {
-    name: "creature",
+    name: "creature, medium",
     cost: "B",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -87,7 +87,7 @@ var BC08 = {
     toughness: 0
 };
 var BC09 = {
-    name: "creature",
+    name: "creature, medium",
     cost: "B",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -98,7 +98,7 @@ var BC09 = {
     toughness: 0
 };
 var BC10 = {
-    name: "creature",
+    name: "creature, medium-large",
     cost: "B",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -109,7 +109,7 @@ var BC10 = {
     toughness: 0
 };
 var BC11 = {
-    name: "creature",
+    name: "creature, large",
     cost: "B",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -120,7 +120,7 @@ var BC11 = {
     toughness: 0
 };
 var BC12 = {
-    name: "spell",
+    name: "spell, combat trick",
     cost: "B",
     types: ["TODO"],
     rarity: "C",
@@ -128,7 +128,7 @@ var BC12 = {
     flavor: ""
 };
 var BC13 = {
-    name: "spell",
+    name: "spell, discard",
     cost: "B",
     types: ["TODO"],
     rarity: "C",
@@ -136,7 +136,7 @@ var BC13 = {
     flavor: ""
 };
 var BC14 = {
-    name: "spell",
+    name: "spell, discard",
     cost: "B",
     types: ["TODO"],
     rarity: "C",
@@ -144,7 +144,7 @@ var BC14 = {
     flavor: ""
 };
 var BC15 = {
-    name: "spell",
+    name: "spell, removal",
     cost: "B",
     types: ["TODO"],
     rarity: "C",
@@ -152,7 +152,7 @@ var BC15 = {
     flavor: "",
 };
 var BC16 = {
-    name: "spell",
+    name: "spell, removal",
     cost: "B",
     types: ["TODO"],
     rarity: "C",
@@ -160,7 +160,7 @@ var BC16 = {
     flavor: "",
 };
 var BC17 = {
-    name: "spell",
+    name: "spell, reanimation",
     cost: "B",
     types: ["TODO"],
     rarity: "C",
@@ -168,7 +168,7 @@ var BC17 = {
     flavor: "",
 };
 var BC18 = {
-    name: "spell",
+    name: "spell, card draw",
     cost: "B",
     types: ["TODO"],
     rarity: "C",
@@ -176,7 +176,7 @@ var BC18 = {
     flavor: "",
 };
 var BC19 = {
-    name: "spell",
+    name: "aura, buff",
     cost: "B",
     types: ["TODO"],
     rarity: "C",
@@ -184,7 +184,7 @@ var BC19 = {
     flavor: "",
 };
 var BC20 = {
-    name: "spell",
+    name: "aura, debuff",
     cost: "B",
     types: ["TODO"],
     rarity: "C",

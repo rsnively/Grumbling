@@ -1,5 +1,5 @@
 var GC01 = {
-    name: "creature",
+    name: "creature, tiny, mana dork",
     cost: "G",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -10,7 +10,7 @@ var GC01 = {
     toughness: 0
 };
 var GC02 = {
-    name: "creature",
+    name: "creature, small",
     cost: "G",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -21,7 +21,7 @@ var GC02 = {
     toughness: 0
 };
 var GC03 = {
-    name: "creature",
+    name: "creature, small",
     cost: "G",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -32,7 +32,7 @@ var GC03 = {
     toughness: 0
 };
 var GC04 = {
-    name: "creature",
+    name: "creature, small, mana dork",
     cost: "G",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -43,7 +43,7 @@ var GC04 = {
     toughness: 0
 };
 var GC05 = {
-    name: "creature",
+    name: "creature, medium-small",
     cost: "G",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -54,7 +54,7 @@ var GC05 = {
     toughness: 0
 };
 var GC06 = {
-    name: "creature",
+    name: "creature, medium",
     cost: "G",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -65,7 +65,7 @@ var GC06 = {
     toughness: 0
 };
 var GC07 = {
-    name: "creature",
+    name: "creature, medium",
     cost: "G",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -76,7 +76,7 @@ var GC07 = {
     toughness: 0
 };
 var GC08 = {
-    name: "creature",
+    name: "creature, medium",
     cost: "G",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -87,7 +87,7 @@ var GC08 = {
     toughness: 0
 };
 var GC09 = {
-    name: "creature",
+    name: "creature, medium-large",
     cost: "G",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -98,7 +98,7 @@ var GC09 = {
     toughness: 0
 };
 var GC10 = {
-    name: "creature",
+    name: "creature, large",
     cost: "G",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -109,7 +109,7 @@ var GC10 = {
     toughness: 0
 };
 var GC11 = {
-    name: "creature",
+    name: "creature, large",
     cost: "G",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -120,7 +120,7 @@ var GC11 = {
     toughness: 0
 };
 var GC12 = {
-    name: "creature",
+    name: "creature, very large",
     cost: "G",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -131,7 +131,7 @@ var GC12 = {
     toughness: 0
 };
 var GC13 = {
-    name: "spell",
+    name: "spell, combat trick",
     cost: "G",
     types: ["TODO"],
     rarity: "C",
@@ -139,7 +139,7 @@ var GC13 = {
     flavor: ""
 };
 var GC14 = {
-    name: "spell",
+    name: "spell, combat trick",
     cost: "G",
     types: ["TODO"],
     rarity: "C",
@@ -147,7 +147,7 @@ var GC14 = {
     flavor: ""
 };
 var GC15 = {
-    name: "spell",
+    name: "spell, fight card",
     cost: "G",
     types: ["TODO"],
     rarity: "C",
@@ -155,7 +155,7 @@ var GC15 = {
     flavor: "",
 };
 var GC16 = {
-    name: "spell",
+    name: "spell, artifact/enchantment removal",
     cost: "G",
     types: ["TODO"],
     rarity: "C",
@@ -163,7 +163,7 @@ var GC16 = {
     flavor: "",
 };
 var GC17 = {
-    name: "spell",
+    name: "spell, flier removal",
     cost: "G",
     types: ["TODO"],
     rarity: "C",
@@ -171,7 +171,7 @@ var GC17 = {
     flavor: "",
 };
 var GC18 = {
-    name: "spell",
+    name: "spell, ramp/filtering",
     cost: "G",
     types: ["TODO"],
     rarity: "C",
@@ -179,7 +179,7 @@ var GC18 = {
     flavor: "",
 };
 var GC19 = {
-    name: "spell",
+    name: "aura, buff",
     cost: "G",
     types: ["TODO"],
     rarity: "C",
@@ -187,7 +187,7 @@ var GC19 = {
     flavor: "",
 };
 var GC20 = {
-    name: "spell",
+    name: "aura, buff",
     cost: "G",
     types: ["TODO"],
     rarity: "C",

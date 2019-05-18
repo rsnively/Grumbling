@@ -1,5 +1,5 @@
 var UC01 = {
-    name: "creature",
+    name: "creature, tiny",
     cost: "U",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -10,7 +10,7 @@ var UC01 = {
     toughness: 0
 };
 var UC02 = {
-    name: "creature",
+    name: "creature, small",
     cost: "U",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -21,7 +21,7 @@ var UC02 = {
     toughness: 0
 };
 var UC03 = {
-    name: "creature",
+    name: "creature, small flying",
     cost: "U",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -32,7 +32,7 @@ var UC03 = {
     toughness: 0
 };
 var UC04 = {
-    name: "creature",
+    name: "creature, medium-small",
     cost: "U",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -43,7 +43,7 @@ var UC04 = {
     toughness: 0
 };
 var UC05 = {
-    name: "creature",
+    name: "creature, medium",
     cost: "U",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -54,7 +54,7 @@ var UC05 = {
     toughness: 0
 };
 var UC06 = {
-    name: "creature",
+    name: "creature, medium",
     cost: "U",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -65,7 +65,7 @@ var UC06 = {
     toughness: 0
 };
 var UC07 = {
-    name: "creature",
+    name: "creature, medium, flying",
     cost: "U",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -76,7 +76,7 @@ var UC07 = {
     toughness: 0
 };
 var UC08 = {
-    name: "creature",
+    name: "creature, large",
     cost: "U",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -87,7 +87,7 @@ var UC08 = {
     toughness: 0
 };
 var UC09 = {
-    name: "spell",
+    name: "spell, instant card draw",
     cost: "U",
     types: ["TODO"],
     rarity: "C",
@@ -95,7 +95,7 @@ var UC09 = {
     flavor: ""
 };
 var UC10 = {
-    name: "spell",
+    name: "spell, sorcery card draw",
     cost: "U",
     types: ["TODO"],
     rarity: "C",
@@ -103,7 +103,7 @@ var UC10 = {
     flavor: ""
 };
 var UC11 = {
-    name: "spell",
+    name: "spell, bounce",
     cost: "U",
     types: ["TODO"],
     rarity: "C",
@@ -111,7 +111,7 @@ var UC11 = {
     flavor: ""
 };
 var UC12 = {
-    name: "spell",
+    name: "spell, combat trick",
     cost: "U",
     types: ["TODO"],
     rarity: "C",
@@ -119,7 +119,7 @@ var UC12 = {
     flavor: ""
 };
 var UC13 = {
-    name: "spell",
+    name: "spell, combat trick",
     cost: "U",
     types: ["TODO"],
     rarity: "C",
@@ -127,7 +127,7 @@ var UC13 = {
     flavor: ""
 };
 var UC14 = {
-    name: "spell",
+    name: "spell, unconditional counterspell",
     cost: "U",
     types: ["TODO"],
     rarity: "C",
@@ -135,7 +135,7 @@ var UC14 = {
     flavor: ""
 };
 var UC15 = {
-    name: "spell",
+    name: "spell, conditional counterspell",
     cost: "U",
     types: ["TODO"],
     rarity: "C",
@@ -143,7 +143,7 @@ var UC15 = {
     flavor: "",
 };
 var UC16 = {
-    name: "spell",
+    name: "spell, counter drink",
     cost: "U",
     types: ["TODO"],
     rarity: "C",
@@ -151,7 +151,7 @@ var UC16 = {
     flavor: "",
 };
 var UC17 = {
-    name: "spell",
+    name: "spell, not drinking reward",
     cost: "U",
     types: ["TODO"],
     rarity: "C",
@@ -159,7 +159,7 @@ var UC17 = {
     flavor: "",
 };
 var UC18 = {
-    name: "spell",
+    name: "aura, buff",
     cost: "U",
     types: ["TODO"],
     rarity: "C",
@@ -167,7 +167,7 @@ var UC18 = {
     flavor: "",
 };
 var UC19 = {
-    name: "spell",
+    name: "aura, debuff",
     cost: "U",
     types: ["TODO"],
     rarity: "C",
@@ -175,7 +175,7 @@ var UC19 = {
     flavor: "",
 };
 var UC20 = {
-    name: "spell",
+    name: "aura, removal",
     cost: "U",
     types: ["TODO"],
     rarity: "C",

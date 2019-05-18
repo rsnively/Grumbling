@@ -1,5 +1,5 @@
 var RC01 = {
-    name: "creature",
+    name: "creature, tiny",
     cost: "R",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -10,7 +10,7 @@ var RC01 = {
     toughness: 0
 };
 var RC02 = {
-    name: "creature",
+    name: "creature, tiny",
     cost: "R",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -21,7 +21,7 @@ var RC02 = {
     toughness: 0
 };
 var RC03 = {
-    name: "creature",
+    name: "creature, small",
     cost: "R",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -32,7 +32,7 @@ var RC03 = {
     toughness: 0
 };
 var RC04 = {
-    name: "creature",
+    name: "creature, small",
     cost: "R",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -43,7 +43,7 @@ var RC04 = {
     toughness: 0
 };
 var RC05 = {
-    name: "creature",
+    name: "creature, small",
     cost: "R",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -54,7 +54,7 @@ var RC05 = {
     toughness: 0
 };
 var RC06 = {
-    name: "creature",
+    name: "creature, medium-small",
     cost: "R",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -65,7 +65,7 @@ var RC06 = {
     toughness: 0
 };
 var RC07 = {
-    name: "creature",
+    name: "creature, medium",
     cost: "R",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -76,7 +76,7 @@ var RC07 = {
     toughness: 0
 };
 var RC08 = {
-    name: "creature",
+    name: "creature, medium",
     cost: "R",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -87,7 +87,7 @@ var RC08 = {
     toughness: 0
 };
 var RC09 = {
-    name: "creature",
+    name: "creature, medium-large",
     cost: "R",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -98,7 +98,7 @@ var RC09 = {
     toughness: 0
 };
 var RC10 = {
-    name: "creature",
+    name: "creature, large",
     cost: "R",
     types: ["Creature"],
     subtypes: ["TODO"],
@@ -109,7 +109,7 @@ var RC10 = {
     toughness: 0
 };
 var RC11 = {
-    name: "spell",
+    name: "spell, combat trick",
     cost: "R",
     types: ["TODO"],
     rarity: "C",
@@ -117,7 +117,7 @@ var RC11 = {
     flavor: ""
 };
 var RC12 = {
-    name: "spell",
+    name: "spell, combat trick",
     cost: "R",
     types: ["TODO"],
     rarity: "C",
@@ -125,7 +125,7 @@ var RC12 = {
     flavor: ""
 };
 var RC13 = {
-    name: "spell",
+    name: "spell, creature damage",
     cost: "R",
     types: ["TODO"],
     rarity: "C",
@@ -133,7 +133,7 @@ var RC13 = {
     flavor: ""
 };
 var RC14 = {
-    name: "spell",
+    name: "spell, creature/player damage",
     cost: "R",
     types: ["TODO"],
     rarity: "C",
@@ -141,7 +141,7 @@ var RC14 = {
     flavor: ""
 };
 var RC15 = {
-    name: "spell",
+    name: "spell, player damage",
     cost: "R",
     types: ["TODO"],
     rarity: "C",
@@ -149,7 +149,7 @@ var RC15 = {
     flavor: "",
 };
 var RC16 = {
-    name: "spell",
+    name: "spell, land destruction",
     cost: "R",
     types: ["TODO"],
     rarity: "C",
@@ -157,7 +157,7 @@ var RC16 = {
     flavor: "",
 };
 var RC17 = {
-    name: "spell",
+    name: "spell, artifact destruction",
     cost: "R",
     types: ["TODO"],
     rarity: "C",
@@ -165,7 +165,7 @@ var RC17 = {
     flavor: "",
 };
 var RC18 = {
-    name: "spell",
+    name: "spell, team pump",
     cost: "R",
     types: ["TODO"],
     rarity: "C",
@@ -173,7 +173,7 @@ var RC18 = {
     flavor: "",
 };
 var RC19 = {
-    name: "spell",
+    name: "spell, direct drinking",
     cost: "R",
     types: ["TODO"],
     rarity: "C",
@@ -181,7 +181,7 @@ var RC19 = {
     flavor: "",
 };
 var RC20 = {
-    name: "spell",
+    name: "aura, buff",
     cost: "R",
     types: ["TODO"],
     rarity: "C",

@@ -10,15 +10,15 @@ var BC01 = {
     toughness: 0
 };
 var BC02 = {
-    name: "creature, small",
-    cost: "B",
+    name: "Boozeplague Rats",
+    cost: "1B",
     types: ["Creature"],
-    subtypes: ["TODO"],
+    subtypes: ["Rat", "Enabler"],
     rarity: "C",
-    rules: "",
-    flavor: "",
-    power: 0,
-    toughness: 0
+    rules: "Enable " + GetEnableReminderText$(),
+    flavor: "They've got single malt whiskers.",
+    power: 1,
+    toughness: 1
 };
 var BC03 = {
     name: "creature, small, lifegain",
@@ -168,12 +168,12 @@ var BC17 = {
     flavor: "",
 };
 var BC18 = {
-    name: "spell, card draw",
-    cost: "B",
-    types: ["TODO"],
+    name: "Drink Alone",
+    cost: "2B",
+    types: ["Sorcery"],
     rarity: "C",
-    rules: "",
-    flavor: "",
+    rules: "Target player draws 2 cards, loses 2 life, and Drinks 2.",
+    flavor: "It sure beats not drinking alone.",
 };
 var BC19 = {
     name: "aura, buff",

@@ -1,10 +1,4 @@
 
-var cardWidth = 234;
-var cardHeight = 327;
-
-var artWidth = cardWidth * 0.83;
-var artHeight = cardHeight * 0.44;
-
 var DesignatedDriver = {
 	name: "Designated Driver",
 	cost: "1RW",
@@ -16,17 +10,6 @@ var DesignatedDriver = {
 	toughness: 3
 }
 
-var AAMember = {
-	name: "AA Member",
-	cost: "W",
-	types: ["Creature"],
-	subtypes: ["Sober", "Human"],
-	rarity: "C",
-	rules: "Sacrifice AA Member: Abstain 1 <span class='reminder'>(Prevent the next 1 drink that would be dealt to you this turn.)</span>",
-	flavor: "The first step towards recovery is having a problem.",
-	power: 1,
-	toughness: 2
-};
 var BackalleyBeerman = {
 	name: "Backalley Beerman",
 	cost: "2B",
@@ -37,15 +20,6 @@ var BackalleyBeerman = {
 	power: 3,
 	toughness: 2
 };
-var Beer = {
-	name: "Beer",
-	cost: "1",
-	types: ["Artifact"],
-	subtypes: ["Beer"],
-	rarity: "C",
-	rules: GetTapSymbol$() + ": Drink 1.",
-	flavor: "\"Yep.\""
-};
 var BeerBong = {
 	name: "Beer Bong",
 	cost: "3",
@@ -53,16 +27,6 @@ var BeerBong = {
 	subtypes: ["Equipment"],
 	rarity: "R",
 	rules: "Equipped creature gets shotguntouch. <span class='reminder'>(When this creature deals damage to a player, that player shotguns a beer.)</span><br>Equip " + GetManaSymbol$("4")
-};
-var Beerbear = {
-	name: "Beerbear",
-	cost: "1G",
-	types: ["Creature"],
-	subtypes: ["Drunk", "Bear"],
-	rarity: "C",
-	rules: GetManaSymbol$("1") + GetManaSymbol$("G") + ", Drink 1: Beerbear gets +2/+2 until end of turn. Activate this ability only once each turn.",
-	power: 2,
-	toughness: 2
 };
 var BigBird = {
 	name: "Big Bird",
@@ -87,16 +51,6 @@ var BoomRoasted = {
 	types: ["Sorcery"],
 	rarity: "C",
 	rules: "Boom! Roasted deals 5 damage to target non-drunk creature."
-};
-var BoozeplagueRat = {
-	name: "Boozeplague Rat",
-	cost: "1B",
-	types: ["Creature"],
-	subtypes: ["Drunk", "Rat"],
-	rarity: "C",
-	rules: "Deathtouch</br>Drinktouch <span class='reminder'>(Whenever this creature deals damage to a player, that player drinks 1.)</span>",
-	power: 1,
-	toughness: 1
 };
 var Brid = {
 	name: "Brid",
@@ -125,13 +79,6 @@ var DiligentBouncer = {
 	rules: "Flash<br>When Diligent Bouncer enters the battlefield, Abstain 1. <span class='reminder'>(Prevent the next 1 drink that would be dealt to you this turn.)</span>",
 	power: 1,
 	toughness: 4
-};
-var DrinkAlone = {
-	name: "Drink Alone",
-	cost: "1B",
-	types: ["Sorcery"],
-	rarity: "C",
-	rules: "Target player draws 2 cards, loses 2 life, and drinks 2."
 };
 var DrownYourSorrows = {
 	name: "Drown Your Sorrows",
@@ -172,16 +119,6 @@ var GoblinBarsonist = {
 	power: 1,
 	toughness: 1
 };
-var GoblinDrinkslinger = {
-	name: "Goblin Drinkslinger",
-	cost: "2R",
-	types: ["Creature"],
-	subtypes: ["Goblin", "Bartender"],
-	rarity: "C",
-	rules: GetTapSymbol$() + ": Target player drinks 1.",
-	power: 2,
-	toughness: 2
-};
 var IgnitionInterlockDevice = {
 	name: "Ignition Interlock Device",
 	cost: "1W",
@@ -208,16 +145,6 @@ var LightBeer = {
 	rarity: "U",
 	rules: GetTapSymbol$() + ", " + GetManaSymbol$("1") + GetManaSymbol$("G") + ": Target creature gets +X/+X until end of turn, where X is the number of Beers you control."
 }
-var MoggDrunkies = {
-	name: "Mogg Drunkies",
-	cost: "1R",
-	types: ["Creature"],
-	subtypes: ["Drunk", "Goblin"],
-	rarity: "C",
-	rules: "Mogg Drunkies can't attack or block unless you've taken a drink this turn.",
-	power: 3,
-	toughness: 3
-};
 var MonkBrewedIPA = {
 	name: "Monk-Brewed IPA",
 	cost: "1",
@@ -244,26 +171,7 @@ var ParoleOfficer = {
 	power: 3,
 	toughness: 1
 };
-var PartyStarter = {
-	name: "Party Starter",
-	cost: "1R",
-	types: ["Creature"],
-	subtypes: ["Human", "Rogue"],
-	rarity: "U",
-	rules: "Haste<br>When Party Starter enters the battlefield, each player Drinks 1.",
-	power: 2,
-	toughness: 1
-};
-var PBArborElf = {
-	name: "PBArbor Elf",
-	cost: "G",
-	types: ["Creature"],
-	subtypes: ["Drunk", "Elf"],
-	rarity: "C",
-	rules: GetTapSymbol$() + ": Add " + GetManaSymbol$("G") + " to your mana pool.",
-	power: 1,
-	toughness: 1
-};
+
 var Shocktop = {
 	name: "Shocktop",
 	cost: "R",
@@ -344,6 +252,9 @@ var YokedIguana = {
 // - bad aura
 // - artifact
 
+// Upper rarity ideas
+// Six Pack Rat
+
 
 
 
@@ -398,20 +309,6 @@ function GetBackground$(card) {
 
 function GetCardName$(card) {
 	return "<span class='cardname'>" + card.name + "</span>";
-}
-
-function GetCostSymbol$(symbol, index) {
-	return "<span class='ms ms-cost ms-" + symbol.toLowerCase() + " ms-shadow mana" + index + "'></span>";
-}
-
-function GetManaSymbol$(color) {
-	var fontsize = cardHeight * 0.028;
-	return "<span class='ms ms-" + color.toLowerCase() + " ms-cost' style='font-size: " + fontsize + "px'></span>";
-}
-
-function GetTapSymbol$() {
-	var fontsize = cardHeight * 0.028;
-	return "<span class='ms ms-cost ms-tap' style='font-size: " + fontsize + "px'></span>";
 }
 
 function GetManaCost$(card) {

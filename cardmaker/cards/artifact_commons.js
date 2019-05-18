@@ -31,13 +31,15 @@ var AC03 = {
     power: 0,
     toughness: 0
 };
+// TODO: Would like the art to fit in with a medieval setting more
 var AC04 = {
-    name: "equipment",
-    cost: "",
+    name: "Beer",
+    cost: "1",
     types: ["Artifact"],
+    subtypes: ["Beer"],
     rarity: "C",
-    rules: "",
-    flavor: ""
+    rules: GetTapSymbol$() + ": Drink 1.",
+    flavor: "\"Yup.\""
 };
 var AC05 = {
     name: "mana rock",

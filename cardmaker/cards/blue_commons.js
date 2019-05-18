@@ -1,13 +1,13 @@
 var UC01 = {
-    name: "creature, tiny",
+    name: "Kork River Swimmer",
     cost: "U",
     types: ["Creature"],
-    subtypes: ["TODO"],
+    subtypes: ["Merfolk", "Drunk"],
     rarity: "C",
-    rules: "",
-    flavor: "",
-    power: 0,
-    toughness: 0
+    rules: "Drink 1: Kork River Swimmer can't be blocked this turn.",
+    flavor: "The waters of the Kork River offer swift passage to those willing to take on a light buzz.",
+    power: 1,
+    toughness: 1
 };
 var UC02 = {
     name: "creature, small",
@@ -65,15 +65,15 @@ var UC06 = {
     toughness: 0
 };
 var UC07 = {
-    name: "creature, medium, flying",
-    cost: "U",
+    name: "Soberscale Drake",
+    cost: "3U",
     types: ["Creature"],
-    subtypes: ["TODO"],
+    subtypes: ["Drake"],
     rarity: "C",
-    rules: "",
-    flavor: "",
-    power: 0,
-    toughness: 0
+    rules: "Flying<br>Whenever you Drink, Soberscale Drake loses flying until end of turn.",
+    flavor: "\"Its weakness is alcohol. Now, who wants to get near its mouth?\"",
+    power: 3,
+    toughness: 2
 };
 var UC08 = {
     name: "creature, large",
@@ -135,12 +135,12 @@ var UC14 = {
     flavor: ""
 };
 var UC15 = {
-    name: "spell, conditional counterspell",
+    name: "Two Drink Minimum",
     cost: "U",
-    types: ["TODO"],
+    types: ["Instant"],
     rarity: "C",
-    rules: "",
-    flavor: "",
+    rules: "Counter target noncreature spell unless its controller Drinks 2.<br>Draw a card.",
+    flavor: "\"By law, we can't force you to drink alcohol. Better use magic instead.\"",
 };
 var UC16 = {
     name: "spell, counter drink",
@@ -175,10 +175,11 @@ var UC19 = {
     flavor: "",
 };
 var UC20 = {
-    name: "aura, removal",
-    cost: "U",
-    types: ["TODO"],
+    name: "On the Rocks",
+    cost: "1U",
+    types: ["Enchantment"],
+    subtypes: ["Aura"],
     rarity: "C",
-    rules: "",
-    flavor: "",
+    rules: "Enchant creature<br>Whenever enchanted creature's controller Drinks, tap enchanted creature.",
+    flavor: "\"This is the opposite of neat.\""
 };

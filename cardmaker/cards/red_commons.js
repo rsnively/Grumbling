@@ -21,26 +21,26 @@ var RC02 = {
     toughness: 0
 };
 var RC03 = {
-    name: "creature, small",
-    cost: "R",
+    name: "Party Starter",
+    cost: "1R",
     types: ["Creature"],
-    subtypes: ["TODO"],
+    subtypes: ["Human", "Rogue"],
     rarity: "C",
-    rules: "",
-    flavor: "",
-    power: 0,
-    toughness: 0
+    rules: "Haste<br>When Party Starter enters the battlefield, each player Drinks 1.",
+    flavor: "\"I require a fellowship of fierce warriors, wise counsel, and loyal friends.\"",
+    power: 2,
+    toughness: 1
 };
 var RC04 = {
-    name: "creature, small",
-    cost: "R",
+    name: "Goblin Drinkslinger",
+    cost: "2R",
     types: ["Creature"],
-    subtypes: ["TODO"],
+    subtypes: ["Goblin", "Bartender"],
     rarity: "C",
-    rules: "",
-    flavor: "",
-    power: 0,
-    toughness: 0
+    rules: GetTapSymbol$() + ": Target player Drinks 1.",
+    flavor: "\"Your money's good enough for a drink, but we reserve the right to kill you later.\"",
+    power: 2,
+    toughness: 2
 };
 var RC05 = {
     name: "creature, small",
@@ -65,15 +65,15 @@ var RC06 = {
     toughness: 0
 };
 var RC07 = {
-    name: "creature, medium",
-    cost: "R",
+    name: "Mogg Drunkies",
+    cost: "1R",
     types: ["Creature"],
-    subtypes: ["TODO"],
+    subtypes: ["Goblin", "Drunk"],
     rarity: "C",
-    rules: "",
-    flavor: "",
-    power: 0,
-    toughness: 0
+    flavor: "Bred for nothing but savagery. But first a quick drink...",
+    rules: "Mogg Drunkies can't attack or block unless you've taken a drink this turn.",
+    power: 3,
+    toughness: 3
 };
 var RC08 = {
     name: "creature, medium",
@@ -165,15 +165,15 @@ var RC17 = {
     flavor: "",
 };
 var RC18 = {
-    name: "spell, team pump",
-    cost: "R",
-    types: ["TODO"],
+    name: "Hair of the Dog",
+    cost: "2R",
+    types: ["Instant"],
     rarity: "C",
-    rules: "",
-    flavor: "",
+    rules: "Until end of turn, attacking creatures get +2/+0 and gain \"When this creature deals combat damage to a player, that player Drinks 1.\"",
+    flavor: "\"You'll feel better soon.\"",
 };
 var RC19 = {
-    name: "spell, direct drinking",
+    name: "spell, threaten",
     cost: "R",
     types: ["TODO"],
     rarity: "C",
@@ -181,7 +181,7 @@ var RC19 = {
     flavor: "",
 };
 var RC20 = {
-    name: "aura, buff",
+    name: "spell, card filtering",
     cost: "R",
     types: ["TODO"],
     rarity: "C",

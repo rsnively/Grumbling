@@ -1,13 +1,12 @@
 var WC01 = {
-    name: "tiny creature",
+    name: "AA Member",
     cost: "W",
     types: ["Creature"],
-    subtypes: ["TODO"],
+    subtypes: ["Human", "Drunk"],
     rarity: "C",
-    rules: "",
-    flavor: "",
-    power: 0,
-    toughness: 0
+    rules: "Sacrifice AA Member: Abstain 1. " + GetAbstainReminderText$(1),
+    power: 1,
+    toughness: 2
 };
 var WC02 = {
     name: "small creature",

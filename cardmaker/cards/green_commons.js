@@ -1,24 +1,24 @@
 var GC01 = {
-    name: "creature, tiny, mana dork",
+    name: "PBArbor Elf",
     cost: "G",
     types: ["Creature"],
-    subtypes: ["TODO"],
+    subtypes: ["Elf", "Drunk"],
     rarity: "C",
-    rules: "",
-    flavor: "",
-    power: 0,
-    toughness: 0
+    rules: GetTapSymbol$() + ", Drink 1: Add " + GetManaSymbol$("G") + ".",
+    flavor: "The arbor at Pendrell Brewery is always bustling with revelers.",
+    power: 1,
+    toughness: 1
 };
 var GC02 = {
-    name: "creature, small",
-    cost: "G",
+    name: "Beerbear",
+    cost: "1G",
     types: ["Creature"],
-    subtypes: ["TODO"],
+    subtypes: ["Bear", "Drunk"],
     rarity: "C",
-    rules: "",
-    flavor: "",
-    power: 0,
-    toughness: 0
+    rules: GetManaSymbol$("1") + GetManaSymbol$("G") + ", Drink 1: Beerbear gets +2/+2 until end of turn. Activate this ability only once each turn.",
+    flavor: "\"Was that a growl, or a hiccup?\"",
+    power: 2,
+    toughness: 2
 };
 var GC03 = {
     name: "creature, small",

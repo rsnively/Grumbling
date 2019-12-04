@@ -97,15 +97,15 @@ var WC09 = {
     toughness: 0
 };
 var WC10 = {
-    name: "medium creature, flying",
-    cost: "W",
+    name: "Fifth Legion Chaplain",
+    cost: "4W",
     types: ["Creature"],
-    subtypes: ["TODO"],
+    subtypes: ["Human", "Cleric"],
     rarity: "C",
-    rules: "",
+    rules: "Vigilance<br>When Fifth Legion Captain enters the battlefield, if you haven't taken a drink this turn, you gain 3 life.",
     flavor: "",
-    power: 0,
-    toughness: 0
+    power: 2,
+    toughness: 5
 };
 var WC11 = {
     name: "medium-large creature",

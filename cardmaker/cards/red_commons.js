@@ -54,15 +54,15 @@ var RC05 = {
     toughness: 0
 };
 var RC06 = {
-    name: "creature, medium-small",
-    cost: "R",
+    name: "Fifth Legion Recruit",
+    cost: "2R",
     types: ["Creature"],
-    subtypes: ["TODO"],
+    subtypes: ["Human", "Soldier"],
     rarity: "C",
-    rules: "",
+    rules: "When Fifth Legion Recruit enters the battlefield, if you've taken a drink this turn, it gains haste until end of turn.",
     flavor: "",
-    power: 0,
-    toughness: 0
+    power: 3,
+    toughness: 2
 };
 var RC07 = {
     name: "Mogg Drunkies",
@@ -133,11 +133,11 @@ var RC13 = {
     flavor: ""
 };
 var RC14 = {
-    name: "spell, creature/player damage",
+    name: "Shocktop",
     cost: "R",
-    types: ["TODO"],
+    types: ["Instant"],
     rarity: "C",
-    rules: "",
+    rules: "Shocktop deals 2 damage to any target. Target player Drinks 1.",
     flavor: ""
 };
 var RC15 = {

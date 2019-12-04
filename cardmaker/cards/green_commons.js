@@ -43,15 +43,15 @@ var GC04 = {
     toughness: 0
 };
 var GC05 = {
-    name: "creature, medium-small",
-    cost: "G",
+    name: "Fifth Legion Ranger",
+    cost: "1G",
     types: ["Creature"],
-    subtypes: ["TODO"],
+    subtypes: ["Elf", "Scout"],
     rarity: "C",
-    rules: "",
+    rules: "When Fifth Legion Ranger enters the battlefield, if you've taken a drink this turn, look at the top 3 cards of your library. You may reveal a land card from among them and put it into your hand. Put the rest on the bottom of your library in any order.",
     flavor: "",
-    power: 0,
-    toughness: 0
+    power: 2,
+    toughness: 1
 };
 var GC06 = {
     name: "creature, medium",
@@ -65,15 +65,15 @@ var GC06 = {
     toughness: 0
 };
 var GC07 = {
-    name: "creature, medium",
-    cost: "G",
+    name: "Wineweaver",
+    cost: "3G",
     types: ["Creature"],
-    subtypes: ["TODO"],
+    subtypes: ["Spider"],
     rarity: "C",
-    rules: "",
-    flavor: "",
-    power: 0,
-    toughness: 0
+    rules: "Drink 1: Wineweaver gains reach until end of turn.",
+    flavor: "Sometimes all it takes is a little pick-me-up.",
+    power: 2,
+    toughness: 4
 };
 var GC08 = {
     name: "creature, medium",

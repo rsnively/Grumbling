@@ -32,15 +32,15 @@ var BC03 = {
     toughness: 0
 };
 var BC04 = {
-    name: "creature, small",
-    cost: "B",
+    name: "Fifth Legion Spy",
+    cost: "1B",
     types: ["Creature"],
-    subtypes: ["TODO"],
+    subtypes: ["Human", "Assassin"],
     rarity: "C",
-    rules: "",
+    rules: "Deathtouch<br>When Fifth Legion Spy enters the battlefield, each opponent who has taken a drink this turn discards a card.",
     flavor: "",
-    power: 0,
-    toughness: 0
+    power: 1,
+    toughness: 2
 };
 var BC05 = {
     name: "creature, medium-small",
@@ -144,11 +144,11 @@ var BC14 = {
     flavor: ""
 };
 var BC15 = {
-    name: "spell, removal",
-    cost: "B",
-    types: ["TODO"],
+    name: "Imbibe",
+    cost: "1B",
+    types: ["Instant"],
     rarity: "C",
-    rules: "",
+    rules: "Target creature gets -2/-2 until end of turn.<br>Drink 2.",
     flavor: "",
 };
 var BC16 = {

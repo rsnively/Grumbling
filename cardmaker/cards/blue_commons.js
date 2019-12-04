@@ -10,59 +10,59 @@ var UC01 = {
     toughness: 1
 };
 var UC02 = {
-    name: "creature, small",
-    cost: "U",
+    name: "Drunken Excavator",
+    cost: "1U",
     types: ["Creature"],
-    subtypes: ["TODO"],
+    subtypes: ["Drunk", "Artificer"],
     rarity: "C",
-    rules: "",
+    rules: "When Drunken Excavator enters the battlefield, target player puts the top 4 cards of their library into their graveyard. If an artifact is put into that player's graveyard this way, you Drink 1.",
     flavor: "",
     power: 0,
-    toughness: 0
+    toughness: 4
 };
 var UC03 = {
-    name: "creature, small flying",
-    cost: "U",
+    name: "Faerie Lightweight",
+    cost: "1U",
     types: ["Creature"],
-    subtypes: ["TODO"],
+    subtypes: ["Faerie", "Rogue"],
     rarity: "C",
-    rules: "",
+    rules: "Flying<br>" + GetManaSymbol$("U") + ", Drink 1: Faerie Lightweight gets +1/-1 until end of turn.",
     flavor: "",
-    power: 0,
-    toughness: 0
+    power: 1,
+    toughness: 2
 };
 var UC04 = {
-    name: "creature, medium-small",
-    cost: "U",
+    name: "Fifth Legion Mage",
+    cost: "2U",
     types: ["Creature"],
-    subtypes: ["TODO"],
+    subtypes: ["Human", "Wizard"],
     rarity: "C",
-    rules: "",
+    rules: "When Fifth Legion Mage enters the battlefield, if you haven't taken a drink this turn, draw a card.",
     flavor: "",
-    power: 0,
-    toughness: 0
+    power: 2,
+    toughness: 3
 };
 var UC05 = {
-    name: "creature, medium",
-    cost: "U",
+    name: "Weary Barman",
+    cost: "2U",
     types: ["Creature"],
-    subtypes: ["TODO"],
+    subtypes: ["Human", "Bartender"],
     rarity: "C",
-    rules: "",
+    rules: GetTapSymbol$() + ": Tap target Drunk creature.",
     flavor: "",
-    power: 0,
-    toughness: 0
+    power: 2,
+    toughness: 2
 };
 var UC06 = {
-    name: "creature, medium",
-    cost: "U",
+    name: "Yoked Crab",
+    cost: "3U",
     types: ["Creature"],
-    subtypes: ["TODO"],
+    subtypes: ["Crab"],
     rarity: "C",
     rules: "",
-    flavor: "",
-    power: 0,
-    toughness: 0
+    flavor: "\"Dude. Crab's yoked.\"",
+    power: 1,
+    toughness: 6
 };
 var UC07 = {
     name: "Soberscale Drake",
@@ -73,65 +73,65 @@ var UC07 = {
     rules: "Flying<br>Whenever you Drink, Soberscale Drake loses flying until end of turn.",
     flavor: "\"Its weakness is alcohol. Now, who wants to get near its mouth?\"",
     power: 3,
-    toughness: 2
+    toughness: 3
 };
 var UC08 = {
-    name: "creature, large",
-    cost: "U",
+    name: "Vengeful Snapper",
+    cost: "4UU",
     types: ["Creature"],
-    subtypes: ["TODO"],
+    subtypes: ["Turtle"],
     rarity: "C",
-    rules: "",
+    rules: "When Vengeful Snapper enters the battlefield, destroy target Beer.",
     flavor: "",
-    power: 0,
-    toughness: 0
+    power: 5,
+    toughness: 6
 };
 var UC09 = {
-    name: "spell, instant card draw",
+    name: "Acquired Taste",
     cost: "U",
-    types: ["TODO"],
+    types: ["Instant"],
     rarity: "C",
-    rules: "",
+    rules: "Draw a card and Drink 1, then draw cards equal to the number of cards named Acquired Taste in all graveyards.",
     flavor: ""
 };
 var UC10 = {
-    name: "spell, sorcery card draw",
-    cost: "U",
-    types: ["TODO"],
+    name: "Attempt to Recall",
+    cost: "2U",
+    types: ["Sorcery"],
     rarity: "C",
-    rules: "",
+    rules: "If you haven't taken a drink this turn, scry 1.<br>Draw 2 cards.",
     flavor: ""
 };
 var UC11 = {
-    name: "spell, bounce",
-    cost: "U",
-    types: ["TODO"],
+    name: "Bounce",
+    cost: "1U",
+    types: ["Instant"],
     rarity: "C",
-    rules: "",
+    rules: "Return target creature to its owner's hand. If a Drunk creature is returned to its owner's hand this way, draw a card.",
     flavor: ""
 };
 var UC12 = {
-    name: "spell, combat trick",
+    name: "Questionable Leap",
     cost: "U",
-    types: ["TODO"],
+    types: ["Instant"],
     rarity: "C",
-    rules: "",
+    rules: "As an additional cost to cast this spell, Drink 2.<br>Target creature gains flying until end of turn.<br>Draw a card.",
     flavor: ""
 };
 var UC13 = {
-    name: "spell, combat trick",
-    cost: "U",
-    types: ["TODO"],
+    name: "Inebriate",
+    cost: "2U",
+    types: ["Instant"],
     rarity: "C",
-    rules: "",
+    rules: "Target creature gets -4/-0 and is a Drunk in addition to its other types until end of turn.<br>Draw a card.",
     flavor: ""
 };
 var UC14 = {
-    name: "spell, unconditional counterspell",
-    cost: "U",
-    types: ["TODO"],
+    name: "Slosh",
+    cost: "1UU",
+    types: ["Instant"],
     rarity: "C",
-    rules: "",
+    rules: "Counter target spell. Its controller Drinks 1.",
     flavor: ""
 };
 var UC15 = {
@@ -140,38 +140,40 @@ var UC15 = {
     types: ["Instant"],
     rarity: "C",
     rules: "Counter target noncreature spell unless its controller Drinks 2.<br>Draw a card.",
-    flavor: "\"By law, we can't force you to drink alcohol. Better use magic instead.\"",
+    flavor: "\"By law, we can't force you to consume alcohol. Let's try magic instead.\"",
 };
 var UC16 = {
-    name: "spell, counter drink",
+    name: "Teetotal",
     cost: "U",
-    types: ["TODO"],
+    types: ["Instant"],
     rarity: "C",
-    rules: "",
+    rules: "Until end of turn, spells and abilities your opponents control can't cause you to Drink.",
     flavor: "",
 };
 var UC17 = {
-    name: "spell, not drinking reward",
-    cost: "U",
-    types: ["TODO"],
+    name: "Top Off",
+    cost: "2UU",
+    types: ["Sorcery"],
     rarity: "C",
-    rules: "",
+    rules: "Put target nonland permanent on top of its owner's library.<br>That permanent's controller Drinks 1.",
     flavor: "",
 };
 var UC18 = {
-    name: "aura, buff",
-    cost: "U",
-    types: ["TODO"],
+    name: "Doubled Form",
+    cost: "2U",
+    types: ["Enchantment"],
+    subtypes: ["Aura"],
     rarity: "C",
-    rules: "",
+    rules: "Enchant creature<br>Enchanted creature gets +2/+2 and can't be blocked by Drunk creatures.",
     flavor: "",
 };
 var UC19 = {
-    name: "aura, debuff",
-    cost: "U",
-    types: ["TODO"],
+    name: "Besottify",
+    cost: "1UU",
+    types: ["Enchantment"],
+    subtypes: ["Aura"],
     rarity: "C",
-    rules: "",
+    rules: "Enchant creature<br>Enchanted creature loses all abilities is a colorless Drunk creature with base power and toughness 1/1.",
     flavor: "",
 };
 var UC20 = {

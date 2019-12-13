@@ -26,7 +26,7 @@ var UC03 = {
     types: ["Creature"],
     subtypes: ["Faerie", "Rogue"],
     rarity: "C",
-    rules: "Flying<br>" + GetManaSymbol$("U") + ", Drink 1: Faerie Lightweight gets +1/-1 until end of turn.",
+    rules: "Flying<br><br>" + GetManaSymbol$("U") + ", Drink 1: Faerie Lightweight gets +1/-1 until end of turn.",
     flavor: "",
     power: 1,
     toughness: 2
@@ -70,7 +70,7 @@ var UC07 = {
     types: ["Creature"],
     subtypes: ["Drake"],
     rarity: "C",
-    rules: "Flying<br>Whenever you Drink, Soberscale Drake loses flying until end of turn.",
+    rules: "Flying<br><br>Whenever you Drink, Soberscale Drake loses flying until end of turn.",
     flavor: "\"Its weakness is alcohol. Now, who wants to get near its mouth?\"",
     power: 3,
     toughness: 3
@@ -164,7 +164,7 @@ var UC18 = {
     types: ["Enchantment"],
     subtypes: ["Aura"],
     rarity: "C",
-    rules: "Enchant creature<br>Enchanted creature gets +2/+2 and can't be blocked by Drunk creatures.",
+    rules: "Enchant creature<br><br>Enchanted creature gets +2/+2 and can't be blocked by Drunk creatures.",
     flavor: "",
 };
 var UC19 = {
@@ -173,7 +173,7 @@ var UC19 = {
     types: ["Enchantment"],
     subtypes: ["Aura"],
     rarity: "C",
-    rules: "Enchant creature<br>Enchanted creature loses all abilities is a colorless Drunk creature with base power and toughness 1/1.",
+    rules: "Enchant creature<br><br>Enchanted creature loses all abilities is a colorless Drunk creature with base power and toughness 1/1.",
     flavor: "",
 };
 var UC20 = {
@@ -182,6 +182,6 @@ var UC20 = {
     types: ["Enchantment"],
     subtypes: ["Aura"],
     rarity: "C",
-    rules: "Enchant creature<br>Whenever enchanted creature's controller Drinks, tap enchanted creature.",
+    rules: "Enchant creature<br><br>Whenever enchanted creature's controller Drinks, tap enchanted creature.",
     flavor: "\"This is the opposite of neat.\""
 };

@@ -1,24 +1,21 @@
 var AC01 = {
-    name: "creature, small",
-    cost: "",
-    types: ["Artifact", "Creature"],
-    subtypes: ["TODO"],
+    name: "Army in a Can",
+    cost: "4",
+    types: ["Artifact"],
     rarity: "C",
-    rules: "",
+    rules: "Drink 2, " + GetTapSymbol$() + ", Sacrifice ~: Create two 1/1 colorless Servo artifact creature tokens.",
     flavor: "",
-    power: 0,
-    toughness: 0
 };
 var AC02 = {
-    name: "creature, medium",
-    cost: "",
+    name: "Crimson Longhorn",
+    cost: "1",
     types: ["Artifact", "Creature"],
-    subtypes: ["TODO"],
+    subtypes: ["Ox"],
     rarity: "C",
-    rules: "",
+    rules: "Whenever you Drink, you may pay " + GetManaSymbol$("4") + ". If you do, ~ gets +2/+0 and gains flying until end of turn.",
     flavor: "",
     power: 0,
-    toughness: 0
+    toughness: 3
 };
 var AC03 = {
     name: "creature, large",
@@ -42,10 +39,10 @@ var AC04 = {
     flavor: "\"Yup.\""
 };
 var AC05 = {
-    name: "mana rock",
-    cost: "",
+    name: "Frosty Mug",
+    cost: "2",
     types: ["Artifact"],
     rarity: "C",
-    rules: "",
+    rules: "When Frosty Mug enters the battlefield, Drink 1 and draw a card.<br><br>" + GetManaSymbol$("1") + ", " + GetTapSymbol$() + ": Add one mana of any color.",
     flavor: ""
 };

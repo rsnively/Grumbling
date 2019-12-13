@@ -102,7 +102,7 @@ var WC10 = {
     types: ["Creature"],
     subtypes: ["Human", "Cleric"],
     rarity: "C",
-    rules: "Vigilance<br>When Fifth Legion Captain enters the battlefield, if you haven't taken a drink this turn, you gain 3 life.",
+    rules: "Vigilance<br><br>When Fifth Legion Captain enters the battlefield, if you haven't taken a drink this turn, you gain 3 life.",
     flavor: "",
     power: 2,
     toughness: 5

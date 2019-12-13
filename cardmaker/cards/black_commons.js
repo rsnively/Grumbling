@@ -37,7 +37,7 @@ var BC04 = {
     types: ["Creature"],
     subtypes: ["Human", "Assassin"],
     rarity: "C",
-    rules: "Deathtouch<br>When Fifth Legion Spy enters the battlefield, each opponent who has taken a drink this turn discards a card.",
+    rules: "Deathtouch<br><br>When Fifth Legion Spy enters the battlefield, each opponent who has taken a drink this turn discards a card.",
     flavor: "",
     power: 1,
     toughness: 2

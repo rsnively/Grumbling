@@ -23,6 +23,11 @@ function GetAbstainReminderText$(amount) {
     return "<span class='reminder'>(You get " + number_of_counters + ", which can be removed to prevent one Drink you would be dealt.)</span>";
 }
 
+function GetCheersReminderText$(amount) {
+    amount = typeof amount !== 'undefined' ? amount : 1;
+    return "<span class='reminder'>(Each player Drinks " + String(amount) + ".)</span>";
+}
+
 function GetEnableReminderText$() {
     return "<span class='reminder'>(This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of Drinks.)</span>";
 }

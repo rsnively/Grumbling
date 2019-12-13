@@ -13,7 +13,7 @@ var TheWizardsStaff = {
     supertypes: ["Legendary"],
     types: ["Artifact"],
     rarity: "M",
-    rules: "At the beginning of your upkeep, Drink 1.<br>Whenever you Drink, put that many Charge counters on ~.<br>Whenever an opponent Drinks, remove that many charge counters from ~.<br>" + GetCostSymbol$(4) + ", " + GetTapSymbol$() + ", Remove 10 Charge counters from ~: You control target opponent during their next turn.",
+    rules: "At the beginning of your upkeep, Drink 1.<br>Whenever you Drink, put that many Charge counters on ~.<br>Whenever an opponent Drinks, remove that many charge counters from ~.<br>" + GetManaSymbol$("4") + ", " + GetTapSymbol$() + ", Remove 10 Charge counters from ~: You control target opponent during their next turn.",
     flavor: "",
 };
 
@@ -37,13 +37,11 @@ var RowdyPub = {
 
 var BudweiserKingOfBeers = {
     name: "Budweiser, King of Beers",
-    cost: "5",
+    cost: "3",
     supertypes: ["Legendary"],
-    types: ["Artifact", "Creature"],
+    types: ["Artifact"],
     subtypes: ["Beer"],
     rarity: "R",
-    rules: "??",
-    flavor: "watery",
-    power: 0,
-    toughness: 0
+    rules: "Beers you control have \"" + GetTapSymbol$() + ", Drink 1: Add one mana of any color.",
+    flavor: "",
 };

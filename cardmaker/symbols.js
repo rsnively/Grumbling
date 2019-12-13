@@ -19,8 +19,10 @@ function GetTapSymbol$() {
 }
 
 function GetAbstainReminderText$(amount) {
-    var number_of_counters = (amount == 1) ? "an Abstinence counter" : (String(amount) + "Abstinence counters");
-    return "<span class='reminder'>(You get " + number_of_counters + ", which can be removed to prevent one Drink you would be dealt.)</span>";
+    amount = typeof amount !== 'undefined' ? amount : 1;
+    var plural = amount == 1 ? "" : "s"
+    var text = String(amount) + " drink" + plural;
+    return "<span class='reminder'>(Abstain from the next " + text + " that would be dealt to you this turn.)</span>";
 }
 
 function GetCheersReminderText$(amount) {

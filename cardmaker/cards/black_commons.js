@@ -136,11 +136,11 @@ var BC13 = {
     flavor: ""
 };
 var BC14 = {
-    name: "spell, discard",
-    cost: "B",
-    types: ["TODO"],
+    name: "Relapse",
+    cost: "2B",
+    types: ["Instant"],
     rarity: "C",
-    rules: "",
+    rules: "Target player discards a card. If that player has taken a drink this turn, they discard 2 cards instead.",
     flavor: ""
 };
 var BC15 = {

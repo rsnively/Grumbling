@@ -88,7 +88,7 @@ var UC08 = {
 };
 var UC09 = {
     name: "Acquired Taste",
-    cost: "U",
+    cost: "1U",
     types: ["Instant"],
     rarity: "C",
     rules: "Draw a card and Drink 1, then draw cards equal to the number of cards named Acquired Taste in all graveyards.",
@@ -115,7 +115,7 @@ var UC12 = {
     cost: "U",
     types: ["Instant"],
     rarity: "C",
-    rules: "As an additional cost to cast this spell, Drink 2.<br>Target creature gains flying until end of turn.<br>Draw a card.",
+    rules: "As an additional cost to cast this spell, Drink 2.<br>Target creature gains +1/+0 and flying until end of turn.",
     flavor: ""
 };
 var UC13 = {
@@ -139,7 +139,7 @@ var UC15 = {
     cost: "U",
     types: ["Instant"],
     rarity: "C",
-    rules: "Counter target noncreature spell unless its controller Drinks 2.<br>Draw a card.",
+    rules: "Counter target spell unless its controller Drinks 2.",
     flavor: "\"By law, we can't force you to consume alcohol. Let's try magic instead.\"",
 };
 var UC16 = {

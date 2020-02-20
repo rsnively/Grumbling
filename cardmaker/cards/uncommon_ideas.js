@@ -36,4 +36,12 @@ var DrunkTank = {
     cost: "3W",
     types: "Enchantment",
     rules: "When ~ enters the battlefield, exile target creature until ~ leaves the battlefield."
-}
+};
+
+var Waterfall = {
+    name: "Waterfall",
+    cost: "2U",
+    types: "Sorcery",
+    rarity: "U",
+    rules: "Drink 1, then you may draw a card. If you do, the player to your left creates a copy of ~."
+};

@@ -9,8 +9,13 @@
     src: url(../fonts/mplanti3.ttf) format("truetype");
 }
 
+@media all {
+	.page_break	{ display: none; }
+}
+
 @media print {
-	body { -webkit-print-color-adjust: exact; }
+    body { -webkit-print-color-adjust: exact; }
+    .page_break	{ display: block; page-break-before: always; }
 }
 
 body {
@@ -32,7 +37,7 @@ br {
 	position: relative;
 	height: 327px;
 	width: 234px;
-	margin-bottom: 6px;
+	margin-bottom: 0px;
 
 }
 

@@ -4,7 +4,7 @@ var UC01 = {
     types: ["Creature"],
     subtypes: ["Merfolk", "Drunk"],
     rarity: "C",
-    rules: "Drink 1: Kork River Swimmer can't be blocked this turn.",
+    rules: "Drink 1: ~ can't be blocked this turn.",
     flavor: "The waters of the Kork River offer swift passage to those willing to take on a light buzz.",
     power: 1,
     toughness: 1
@@ -15,7 +15,7 @@ var UC02 = {
     types: ["Creature"],
     subtypes: ["Drunk", "Artificer"],
     rarity: "C",
-    rules: "When Drunken Excavator enters the battlefield, target player puts the top 4 cards of their library into their graveyard. If an artifact is put into that player's graveyard this way, you Drink 1.",
+    rules: "When ~ enters the battlefield, target player puts the top 4 cards of their library into their graveyard. If an artifact is put into that player's graveyard this way, you Drink 1.",
     flavor: "",
     power: 0,
     toughness: 4
@@ -26,7 +26,7 @@ var UC03 = {
     types: ["Creature"],
     subtypes: ["Faerie", "Rogue"],
     rarity: "C",
-    rules: "Flying<br><br>" + GetManaSymbol$("U") + ", Drink 1: Faerie Lightweight gets +1/-1 until end of turn.",
+    rules: "Flying<br><br>" + GetManaSymbol$("U") + ", Drink 1: ~ gets +1/-1 until end of turn.",
     flavor: "",
     power: 1,
     toughness: 2
@@ -37,7 +37,7 @@ var UC04 = {
     types: ["Creature"],
     subtypes: ["Human", "Wizard"],
     rarity: "C",
-    rules: "When Fifth Legion Mage enters the battlefield, if you haven't taken a drink this turn, draw a card.",
+    rules: "When ~ enters the battlefield, if you haven't taken a drink this turn, draw a card.",
     flavor: "",
     power: 2,
     toughness: 3
@@ -70,7 +70,7 @@ var UC07 = {
     types: ["Creature"],
     subtypes: ["Drake"],
     rarity: "C",
-    rules: "Flying<br><br>Whenever you Drink, Soberscale Drake loses flying until end of turn.",
+    rules: "Flying<br>Whenever you Drink, ~ loses flying until end of turn.",
     flavor: "\"Its weakness is alcohol. Now, who wants to get near its mouth?\"",
     power: 3,
     toughness: 3
@@ -81,19 +81,21 @@ var UC08 = {
     types: ["Creature"],
     subtypes: ["Turtle"],
     rarity: "C",
-    rules: "When Vengeful Snapper enters the battlefield, destroy target Beer.",
+    rules: "When ~ enters the battlefield, destroy target Beer.",
     flavor: "",
     power: 5,
     toughness: 6
 };
+// Art idea: Someone attempting to pour out a nasty-looking drink, but it's magically streaming up into their mouth anyways.
 var UC09 = {
     name: "Acquired Taste",
     cost: "1U",
     types: ["Instant"],
     rarity: "C",
-    rules: "Draw a card and Drink 1, then draw cards equal to the number of cards named Acquired Taste in all graveyards.",
+    rules: "Draw a card and Drink 1, then draw cards equal to the number of cards named ~ in all graveyards.",
     flavor: ""
 };
+// Art idea; Someone poring over a book with a party going on outside/nearby/in the room
 var UC10 = {
     name: "Attempt to Recall",
     cost: "2U",

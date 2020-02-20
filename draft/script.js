@@ -9,13 +9,13 @@ var card_height = card_height_actual;
 function Card(name, manaCost, color, type, rarity) {
     this.name = name;
     this.manaCost = manaCost;
-    
+
     // WUBRG, "" = colorless, M = multicolored
     this.color = color;
-    
+
     // Land, Creature, Instant...
     this.type = type;
-        
+
     // C, U, R, M
     this.rarity = rarity;
 }
@@ -23,24 +23,18 @@ function Card(name, manaCost, color, type, rarity) {
 
 // Arrays for holding all of the card names.
 
-var grumbling_commons = [
-	new Card("AA Member", 1, "W", "Creature", "C"),
-	new Card("Beer", 1, "", "Artifact", "C"),
-	new Card("Mogg Drunkies", 2, "R", "Creature", "C"),
-	new Card("PBArbor Elf", 1, "G", "Creature", "C"),
-];
 var grumbling_uncommons = [
-	new Card("Bubbling Stout", 1, "", "Artifact", "U"),
-	new Card("Forty", 1, "", "Artifact", "U"),
-	new Card("Non Alcoholic Beer", 1, "", "Artifact", "U")
+    new Card("Bubbling Stout", 1, "", "Artifact", "U"),
+    new Card("Forty", 1, "", "Artifact", "U"),
+    new Card("Non Alcoholic Beer", 1, "", "Artifact", "U")
 ];
 var grumbling_rares = [
-	new Card("Steve Ballmer Executive", 3, "M", "Creature", "R")
+    new Card("Steve Ballmer Executive", 3, "M", "Creature", "R")
 ]
-                   
-                   
+
+
 var draftTypeChosen = [];
-                   
+
 var collection = [];
 
 var sortedByCMC = true;         // CMC > Color > Name (the default sorting method)
@@ -58,25 +52,25 @@ function makeRelativeImageTag(card, left, top) {
 }
 
 function grumbling_pack() {
-	return generatePack(grumbling_rares, grumbling_uncommons, grumbling_commons);
+    return generatePack(grumbling_rares, grumbling_uncommons, grumbling_commons);
 }
 
 function generatePack(rares, uncommons, commons) {
     var pack = [];
-	
-	var rare_r = Math.floor(Math.random() * rares.length);
-	pack.push(rares[rare_r]);
-	
-	for (var i = 0; i < 3; i++) {
-		var r = Math.floor(Math.random() * uncommons.length);
-		pack.push(uncommons[r]);
-	}
-	
-	for (var i = 0; i < 10; i++) {
-		var r = Math.floor(Math.random() * commons.length);
-		pack.push(commons[r]);
-	}
-    
+
+    var rare_r = Math.floor(Math.random() * rares.length);
+    pack.push(rares[rare_r]);
+
+    for (var i = 0; i < 3; i++) {
+        var r = Math.floor(Math.random() * uncommons.length);
+        pack.push(uncommons[r]);
+    }
+
+    for (var i = 0; i < 10; i++) {
+        var r = Math.floor(Math.random() * commons.length);
+        pack.push(commons[r]);
+    }
+
 	/* This'll work once we have enough cards
 	 TODO: mythics???
     var mythic_or_rare = Math.random() * 8;
@@ -113,7 +107,7 @@ function generatePack(rares, uncommons, commons) {
         }
     }
 	*/
-    
+
 	/* If we ever do foils...
     var foil_or_land = Math.random() * 6.5;
     if (foil_or_land < 1) {
@@ -156,14 +150,14 @@ function makePick(pack) {
             return;
         }
     }
-    
+
     pack.splice(0, 1);
 }
 
 function addToCollection(card) {
     var colorOrder = ["W", "U", "B", "R", "G", "M", ""];
     var rarityOrder = ["M", "R", "U", "C"];
-    
+
     if (sortedByCMC) {
         for (var i = 0; i < collection.length; i++) {
             // New card's mana cost already exists, insert it.
@@ -253,16 +247,16 @@ function addToCollection(card) {
 
 function drawSideboard() {
     $("#sideboard").html("");
-    
+
     for (var i = 0; i < sideboard.length; i++) {
         $("#sideboard").append(makeImageTag(sideboard[i]));
     }
-    
-    $("#sideboard img").click(function() {
+
+    $("#sideboard img").click(function () {
         var cardIndex = ($("#sideboard img").index(this));
         addToCollection(sideboard[cardIndex]);
         sideboard.splice(cardIndex, 1);
-        
+
         drawSideboard();
         drawCollection();
     });
@@ -271,7 +265,7 @@ function drawSideboard() {
 function sortCollection() {
     var tempCollection = collection;
     collection = [];
-    
+
     for (var i = 0; i < tempCollection.length; i++) {
         for (var j = 0; j < tempCollection[i].length; j++) {
             addToCollection(tempCollection[i][j]);
@@ -281,7 +275,7 @@ function sortCollection() {
 
 function drawCollection() {
     $("#player_collection").html("");
-    
+
     // Generate numbers
     var num_cards = 0;
     var num_lands = 0;
@@ -289,7 +283,7 @@ function drawCollection() {
     for (var i = 0; i < collection.length; i++) {
         for (var j = 0; j < collection[i].length; j++) {
             num_cards++;
-            
+
             if (collection[i][j].type === "Land") {
                 num_lands++;
             }
@@ -298,23 +292,23 @@ function drawCollection() {
             }
         }
     }
-    
+
     $("#player_collection").append("<p style='color: orange'>Cards: " + num_cards + "  Lands: " + num_lands + "  Creatures: " + num_creatures + "  Other: " + (num_cards - num_lands - num_creatures) + "</p>");
-            
-    
-    
+
+
+
     // Draw cards
     for (var i = 0; i < collection.length; i++) {
         var bin = collection[i];
-        
+
         for (var j = 0; j < bin.length; j++) {
-            $("#player_collection").append(makeRelativeImageTag(bin[j], i*(card_width + 20), 40 + j*32));
+            $("#player_collection").append(makeRelativeImageTag(bin[j], i * (card_width + 20), 40 + j * 32));
         }
     }
-    
-    $("#player_collection img").click(function() {
+
+    $("#player_collection img").click(function () {
         var cardIndex = ($("#player_collection img").index(this));
-        
+
         var index = 0;
         for (var i = 0; i < collection.length; i++) {
             for (var j = 0; j < collection[i].length; j++) {
@@ -324,7 +318,7 @@ function drawCollection() {
                     if (collection[i].length === 0) {
                         collection.splice(i, 1);
                     }
-                    
+
                     drawSideboard();
                     drawCollection();
                     return;
@@ -332,7 +326,7 @@ function drawCollection() {
                 index++;
             }
         }
-        
+
         drawSideboard();
         drawCollection();
     });
@@ -345,12 +339,12 @@ function drawPack(rounds, roundNumber, packNumber) {
         $("#pack").append(makeImageTag(pack[i]));
     }
     drawCollection();
-    
-    $("#pack img").click(function() {
+
+    $("#pack img").click(function () {
         var cardIndex = ($("#pack img").index(this));
         addToCollection(pack[cardIndex]);
         pack.splice(cardIndex, 1);
-        
+
         for (var i = 0; i < rounds[roundNumber].length; i++) {
             if (i !== packNumber) {
                 makePick(rounds[roundNumber][i]);
@@ -373,7 +367,7 @@ function drawPack(rounds, roundNumber, packNumber) {
 
 function redrawSite() {
     $("body").html("");
-    
+
     $("body").append("<div id='pack'></div>");
     $("body").append("<hr>");
     $("body").append("<span class='button' id='sort_cmc'>Sort by Converted Mana Cost</span>");
@@ -388,40 +382,40 @@ function redrawSite() {
 
 function main() {
 
-	var rounds = [];
-	for (var i = 0; i < 3; i++) {
-		var packs = [];
-		for (var j = 0; j < 8; j++) {
-			packs.push(grumbling_pack());
-		}
-		rounds.push(packs);
-	}
+    var rounds = [];
+    for (var i = 0; i < 3; i++) {
+        var packs = [];
+        for (var j = 0; j < 8; j++) {
+            packs.push(grumbling_pack());
+        }
+        rounds.push(packs);
+    }
 
-	drawPack(rounds, 0, 0);
-	
-	$("#sort_cmc").click(function() {
-		sortedByCMC = true;
-		sortedByColor = false;
-		sortedByRarity = false;
-		sortCollection();
-		drawCollection();
-	});
-	
-	$("#sort_color").click(function() {
-		sortedByCMC = false;
-		sortedByColor = true;
-		sortedByRarity = false;
-		sortCollection();
-		drawCollection();
-	});
-	
-	$("#sort_rarity").click(function() {
-		sortedByCMC = false;
-		sortedByColor = false;
-		sortedByRarity = true;
-		sortCollection();
-		drawCollection();
-	});
+    drawPack(rounds, 0, 0);
+
+    $("#sort_cmc").click(function () {
+        sortedByCMC = true;
+        sortedByColor = false;
+        sortedByRarity = false;
+        sortCollection();
+        drawCollection();
+    });
+
+    $("#sort_color").click(function () {
+        sortedByCMC = false;
+        sortedByColor = true;
+        sortedByRarity = false;
+        sortCollection();
+        drawCollection();
+    });
+
+    $("#sort_rarity").click(function () {
+        sortedByCMC = false;
+        sortedByColor = false;
+        sortedByRarity = true;
+        sortCollection();
+        drawCollection();
+    });
 }
 
 $(document).ready(main);

@@ -255,18 +255,6 @@ var YokedIguana = {
 // Upper rarity ideas
 // Six Pack Rat
 
-
-
-
-var commons = [
-    WC01, WC02, WC03, WC04, WC05, WC06, WC07, WC08, WC09, WC10, WC11, WC12, WC13, WC14, WC15, WC16, WC17, WC18, WC19, WC20,
-    UC01, UC02, UC03, UC04, UC05, UC06, UC07, UC08, UC09, UC10, UC11, UC12, UC13, UC14, UC15, UC16, UC17, UC18, UC19, UC20,
-    BC01, BC02, BC03, BC04, BC05, BC06, BC07, BC08, BC09, BC10, BC11, BC12, BC13, BC14, BC15, BC16, BC17, BC18, BC19, BC20,
-    RC01, RC02, RC03, RC04, RC05, RC06, RC07, RC08, RC09, RC10, RC11, RC12, RC13, RC14, RC15, RC16, RC17, RC18, RC19, RC20,
-    GC01, GC02, GC03, GC04, GC05, GC06, GC07, GC08, GC09, GC10, GC11, GC12, GC13, GC14, GC15, GC16, GC17, GC18, GC19, GC20,
-    AC01, AC02, AC03, AC04, AC05,
-];
-
 var rares = [
     BudweiserKingOfBeers,
 ];
@@ -356,6 +344,7 @@ function GetCardRarity$(card) {
 
 function GetCardText$(card) {
     var rules$ = card.rules == undefined ? "" : "<span class='cardtext'>" + card.rules + "</span>";
+    rules$ = rules$.replace("~", card.name);
     var flavor$ = card.flavor == undefined ? "" : "<span class='cardflavor'><i>" + card.flavor + "</i></span>";
     return rules$ + flavor$;
 }
@@ -382,14 +371,31 @@ function GetCard$(card) {
 function main() {
     var cards$ = "";
 
-    // 1 of each card
-    for (var c = 0; c < commons.length; c++) {
-        cards$ += GetCard$(commons[c]);
+    // 2 each white and blue commons
+    var page_break = 0;
+    for (var c = 0; c < grumbling_commons.length; c++) {
+        var card = grumbling_commons[c];
+        var color = GetColor(card);
+        if (color == "U" || color == "W") {
+            for (var i = 0; i < 2; i++) {
+                page_break += 1;
+                cards$ += GetCard$(card);
+                if (page_break == 9) {
+                    cards$ += "<div class='page_break'></div>";
+                    page_break = 0;
+                }
+            }
+        }
     }
 
-    for (var r = 0; r < rares.length; r++) {
-        cards$ += GetCard$(rares[r]);
-    }
+    // 1 of each card
+    // for (var c = 0; c < grumbling_commons.length; c++) {
+    //     cards$ += GetCard$(grumbling_commons[c]);
+    // }
+
+    // for (var r = 0; r < rares.length; r++) {
+    //     cards$ += GetCard$(rares[r]);
+    // }
 
     // 3 commons, 1 uncommon
     // for (var c = 0; c < allcards.length; c++) {

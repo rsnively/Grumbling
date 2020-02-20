@@ -139,13 +139,13 @@ var GC13 = {
     flavor: ""
 };
 var GC14 = {
-    name: "spell, combat trick",
-    cost: "G",
-    types: ["TODO"],
+    name: "Hangover Cure",
+    cost: "1G",
+    types: ["Instant"],
     rarity: "C",
-    rules: "",
+    rules: "Drink 1.<br>Target creature gets +3/+3 until end of turn. Untap that creature.",
     flavor: ""
-};
+};  
 var GC15 = {
     name: "spell, fight card",
     cost: "G",

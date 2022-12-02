@@ -344,7 +344,7 @@ function GetCardRarity$(card) {
 
 function GetCardText$(card) {
     var rules$ = card.rules == undefined ? "" : "<span class='cardtext'>" + card.rules + "</span>";
-    rules$ = rules$.replace("~", card.name);
+    rules$ = rules$.replace(/~/g, card.name);
     var flavor$ = card.flavor == undefined ? "" : "<span class='cardflavor'><i>" + card.flavor + "</i></span>";
     return rules$ + flavor$;
 }
@@ -371,22 +371,34 @@ function GetCard$(card) {
 function main() {
     var cards$ = "";
 
-    // 2 each white and blue commons
     var page_break = 0;
-    for (var c = 0; c < grumbling_commons.length; c++) {
-        var card = grumbling_commons[c];
-        var color = GetColor(card);
-        if (color == "U" || color == "W") {
-            for (var i = 0; i < 2; i++) {
-                page_break += 1;
-                cards$ += GetCard$(card);
-                if (page_break == 9) {
-                    cards$ += "<div class='page_break'></div>";
-                    page_break = 0;
-                }
-            }
+    var deck = DECK_ZOMBIES;
+    for (var c = 0; c < deck.length; c++) {
+        var card = deck[c];
+        page_break += 1;
+        cards$ += GetCard$(card);
+        if (page_break == 9) {
+            cards$ += "<div class='page_break'></div>";
+            page_break = 0;
         }
     }
+
+    // 2 each white and blue commons
+    // var page_break = 0;
+    // for (var c = 0; c < grumbling_commons.length; c++) {
+    //     var card = grumbling_commons[c];
+    //     var color = GetColor(card);
+    //     if (color == "U" || color == "W") {
+    //         for (var i = 0; i < 2; i++) {
+    //             page_break += 1;
+    //             cards$ += GetCard$(card);
+    //             if (page_break == 9) {
+    //                 cards$ += "<div class='page_break'></div>";
+    //                 page_break = 0;
+    //             }
+    //         }
+    //     }
+    // }
 
     // 1 of each card
     // for (var c = 0; c < grumbling_commons.length; c++) {

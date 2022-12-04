@@ -60,6 +60,17 @@ var angel_of_better_judgment = {
     toughness: 4,
 };
 
+var bar_crawler = {
+    name: "Bar Crawler",
+    cost: "B",
+    types: ["Creature"],
+    subtypes: ["Zombie"],
+    rarity: "R",
+    rules: GetManaSymbol$("2") + GetManaSymbol$("B") + ": Return ~ from your graveyard to the battlefield tapped. Activate this ability only if you've taken a drink this turn.",
+    power: 2,
+    toughness: 1,
+};
+
 var beer = {
     name: "Beer",
     cost: "1",
@@ -100,12 +111,31 @@ var beer_run = {
     rules: "Search your library for a basic land card, put it onto the battlefield tapped, then shuffle. Then you may take a drink. If you do, untap that land.",
 };
 
+var belch = {
+    name: "Belch",
+    cost: "2R",
+    types: ["Sorcery"],
+    rarity: "R",
+    rules: "As an additional cost to cast this spell, take 2 drinks.<br>~ deals 2 damage to each creature."
+};
+
 var booze_cruise = {
     name: "Booze Cruise",
     cost: "7U",
     types: ["Sorcery"],
     rarity: "C",
     rules: "This spell costs " + GetManaSymbol$("1") + " less to cast for each drink you've taken this turn.<br><br>Draw 3 cards.",
+};
+
+var boozeplague_rats = {
+    name: "Boozeplague Rats",
+    cost: "1B",
+    types: ["Creature"],
+    subtypes: ["Rat"],
+    rarity: "C",
+    rules: "Deathtouch " + GetDeathtouchReminderText$() + "<br>Whenever ~ deals combat damage to a player, they take a drink.",
+    power: 1,
+    toughness: 1,
 };
 
 var bounce = {
@@ -326,6 +356,14 @@ var hair_of_the_dog = {
     rules: "Put target creature card from a graveyard onto the battlefield under your control. You take drinks equal to its mana value.",
 };
 
+var happy_hour = {
+    name: "Happy Hour",
+    cost: "1RR",
+    types: "Enchantment",
+    rarity: "R",
+    rules: "If a player would take one or more drinks, they instead take that many drinks plus one.",
+};
+
 var hangover_cure = {
     name: "Hangover Cure",
     cost: "1G",
@@ -362,6 +400,14 @@ var hype_man = {
     rules: "Reach<br><br>Whenever you drink, create a 1/1 white Soldier creature token.",
     power: 0,
     toughness: 4,
+};
+
+var imbibe = {
+    name: "Imbibe",
+    cost: "B",
+    types: ["Instant"],
+    rarity: "C",
+    rules: "As an additional cost to cast this spell, take 2 drinks.<br>Target creature gets -2/-2 until end of turn.",
 };
 
 var inner_demon = {
@@ -440,6 +486,15 @@ var liquor_license = {
     rules: "Enchant land<br>When ~ enters the battlefield, draw a card.<br>Whenever enchanted land becomes tapped, its controller takes a drink.",
 };
 
+var liquored_up = {
+    name: "Liquored Up",
+    cost: "2UU",
+    types: ["Enchantment"],
+    subtypes: ["Aura"],
+    rarity: "R",
+    rules: "Enchant creature<br>When ~ enters the battlefield, take drinks equal to enchanted creature's mana value.<br>You control enchanted creature.",
+};
+
 var monastery_brewmaster = {
     name: "Monastery Brewmaster",
     cost: "R",
@@ -509,6 +564,14 @@ var past_mistakes = {
     rarity: "R",
     rules: "Each instant and sorcery card in your graveyard gains flashback until end of turn. The flashback cost is its mana cost plus a drink.<br>Flashback " + GetManaSymbol$("4") + GetManaSymbol$("R") + " <i>(You may cast this card from your graveyard for its flashback cost. Then exile it.)</i>",
     flavor: "",
+};
+
+var pay_your_respects = {
+    name: "Pay Your Respects",
+    cost: "1BB",
+    types: ["Instant"],
+    rarity: "C",
+    rules: "Destroy target creature. Each player takes a drink.",
 };
 
 var peerless_presser = {
@@ -592,7 +655,7 @@ var steel_bartender = {
 };
 
 var stirring_eulogist = {
-    name: "Stirring Euologist",
+    name: "Stirring Eulogist",
     cost: "1B",
     types: ["Creature"],
     subtypes: ["Vampire"],
@@ -614,6 +677,14 @@ var thermo_alchoholic = {
     toughness: 3,
 };
 
+var thoughtslurp = {
+    name: "Thoughtslurp",
+    cost: "B",
+    types: ["Sorcery"],
+    rarity: "R",
+    rules: "Target player reveals their hand. You choose a nonland card from it. That player discards that card. You take drinks equal to its mana value.",
+};
+
 var toastmaster = {
     name: "Toastmaster",
     cost: "W",
@@ -633,6 +704,17 @@ var top_off = {
     rarity: "C",
     rules: "Put target nonland permanent on top of its owner's library.<br><br>That permanent's controller takes a drink.",
     flavor: "",
+};
+
+var wallflower = {
+    name: "Wallflower",
+    cost: "1G",
+    types: ["Creature"],
+    subtypes: ["Plant", "Wall"],
+    rarity: "C",
+    rules: "Defender " + GetDefenderReminderText$() + "<br>When ~ enters the battlefield, each other player takes a drink.",
+    power: 0,
+    toughness: 4,
 };
 
 var waterfall = {
@@ -712,12 +794,15 @@ var MISHMASH = [
     adult_white_sangria,
     alcoholic_ritual,
     angel_of_better_judgment,
+    bar_crawler,
     beer,
     beer_bong,
     beer_delivery_drone,
     beer_run,
+    belch,
     bounce,
     booze_cruise,
+    boozeplague_rats,
     burp_hurler,
     buzz,
     cheers,
@@ -741,9 +826,11 @@ var MISHMASH = [
     goblin_sommelier,
     hair_of_the_dog,
     hangover_cure,
+    happy_hour,
     high_functioning_alcoholic,
     hip_flask,
     hype_man,
+    imbibe,
     inner_demon,
     keg_fiend,
     keg_stand,
@@ -752,6 +839,7 @@ var MISHMASH = [
     let_it_breathe,
     lightning_breath,
     liquor_license,
+    liquored_up,
     monastery_brewmaster,
     mull,
     open_bar,
@@ -759,11 +847,13 @@ var MISHMASH = [
     party_fowl,
     party_starter,
     past_mistakes,
+    pay_your_respects,
     peerless_presser,
     ping_pong_ball,
     pitcher,
     power_hour,
     prohibition,
+    thoughtslurp,
     toastmaster,
     top_off,
     slosh,
@@ -772,6 +862,7 @@ var MISHMASH = [
     steel_bartender,
     stirring_eulogist,
     thermo_alchoholic,
+    wallflower,
     waterfall,
     wedding_crasher,
     wine_mom,

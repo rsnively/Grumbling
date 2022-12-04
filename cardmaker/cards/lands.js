@@ -7,6 +7,22 @@ var city_of_class = {
     flavor: "",
 };
 
+var country_club = {
+    name: "Country Club",
+    cost: "",
+    types: ["Land"],
+    rarity: "C",
+    rules: "~ enters the battlefield tapped.<br>When ~ enters the battlefield, take a drink.<br>" + GetTapSymbol$() + ": Add " + GetManaSymbol$("W") + " or " + GetManaSymbol$("B") + ".",
+};
+
+var fairy_ring = {
+    name: "Fairy Ring",
+    cost: "",
+    types: ["Land"],
+    rarity: "C",
+    rules: "~ enters the battlefield tapped.<br>When ~ enters the battlefield, take a drink.<br>" + GetTapSymbol$() + ": Add " + GetManaSymbol$("B") + " or " + GetManaSymbol$("G") + ".",
+};
+
 var fermenting_caverns = {
     name: "Fermenting Caverns",
     cost: "",
@@ -40,6 +56,14 @@ var lazy_river = {
     rules: "~ enters the battlefield tapped.<br>When ~ enters the battlefield, take a drink.<br>" + GetTapSymbol$() + ": Add " + GetManaSymbol$("W") + " or " + GetManaSymbol$("U") + ".",
 };
 
+var murky_lagoon = {
+    name: "Picnic Clearing",
+    cost: "",
+    types: ["Land"],
+    rarity: "C",
+    rules: "~ enters the battlefield tapped.<br>When ~ enters the battlefield, take a drink.<br>" + GetTapSymbol$() + ": Add " + GetManaSymbol$("U") + " or " + GetManaSymbol$("B") + ".",
+};
+
 var night_club = {
     name: "Night Club",
     cost: "",
@@ -47,6 +71,14 @@ var night_club = {
     subtypes: ["Swamp", "Mountain"],
     rarity: "R",
     rules: "<i>(" + GetTapSymbol$() + ": Add " + GetManaSymbol$("B") + " or " + GetManaSymbol$("R") + ".)</i><br>As ~ enters the battlefield, you may take 2 drinks. If you don't, it enters the battlefield tapped.",
+};
+
+var picnic_clearing = {
+    name: "Picnic Clearing",
+    cost: "",
+    types: ["Land"],
+    rarity: "C",
+    rules: "~ enters the battlefield tapped.<br>When ~ enters the battlefield, take a drink.<br>" + GetTapSymbol$() + ": Add " + GetManaSymbol$("G") + " or " + GetManaSymbol$("W") + ".",
 };
 
 var pirates_cove = {
@@ -108,13 +140,13 @@ var LANDS = [
 
     // ETB Tapped, Drink 1
     lazy_river,
-    //ub
+    murky_lagoon,
     fermenting_caverns,
     festive_campground,
-    //gw
+    picnic_clearing,
     tunnel_of_love,
     terraced_vineyard,
     watering_hole,
-    //wb
-    //gb
+    country_club,
+    fairy_ring,
 ];

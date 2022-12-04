@@ -278,7 +278,10 @@ function GetColor(card) {
 function GetBackground$(card) {
     var base = "";
     var color = GetColor(card);
-    if (card.types.includes("Creature")) {
+    if (card.types.includes("Land")) {
+        base = "multicolor_noncreature";
+    }
+    else if (card.types.includes("Creature")) {
         if (color == "W") base = "white_creature";
         else if (color == "U") base = "blue_creature";
         else if (color == "B") base = "black_creature";
@@ -372,14 +375,16 @@ function main() {
     var cards$ = "";
 
     var page_break = 0;
-    var deck = DECK_ZOMBIES;
+    var deck = MISHMASH.concat(LANDS);
     for (var c = 0; c < deck.length; c++) {
-        var card = deck[c];
-        page_break += 1;
-        cards$ += GetCard$(card);
-        if (page_break == 9) {
-            cards$ += "<div class='page_break'></div>";
-            page_break = 0;
+        for (var i = 0; i < 1; i++) {
+            var card = deck[c];
+            page_break += 1;
+            cards$ += GetCard$(card);
+            if (page_break == 9) {
+                cards$ += "<div class='page_break'></div>";
+                page_break = 0;
+            }
         }
     }
 

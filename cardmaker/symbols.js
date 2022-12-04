@@ -33,3 +33,42 @@ function GetCheersReminderText$(amount) {
 function GetEnableReminderText$() {
     return "<span class='reminder'>(This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of Drinks.)</span>";
 }
+
+function GetDeathtouchReminderText$() {
+    return "<span class='reminder'>(Any amount of damage this deals to a creature is enough to destroy it.)</span>";
+}
+
+function GetDefenderReminderText$() {
+    return "<span class='reminder'>(This creature can't attack.)</span>";
+}
+
+function GetFlyingReminderText$() {
+    return "<span class='reminder'>(This creature can't be blocked except by creatures with flying and/or reach.)</span>";
+}
+
+function GetHasteReminderText$() {
+    return "<span class='reminder'>(This creature can attack and " + GetTapSymbol$() + " as soon as it comes under your control.)</span>";
+}
+
+function GetIndestructibleReminderText$() {
+    return "<span class='reminder'>(Damage and effects that say \"destroy\" don't destroy this.)</span>";
+}
+
+function GetLifelinkReminderText$() {
+    return "<span class='reminder'>(Damage dealt by this creature also causes you to gain that much life.)</span>";
+}
+
+function GetMillReminderText$() {
+    return "<span class='reminder'>(Put the top card of your library into your graveyard.)</span>";
+}
+
+function GetReachReminderText$() {
+    return "<span class='reminder'>(This creature can block creatures with flying.)</span>";
+}
+
+function GetTrampleReminderText$() {
+    return "<span class='reminder'>(This creature can deal excess combat damage to a player or planeswalker it's attacking.)</span>";
+}
+function GetVigilanceReminderText$() {
+    return "<span class='reminder'>(Attacking does not cause this creature to tap.)</span>";
+}

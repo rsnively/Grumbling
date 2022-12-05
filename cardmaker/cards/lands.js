@@ -7,6 +7,15 @@ var city_of_class = {
     flavor: "",
 };
 
+var unstable_ground = {
+    name: "Unstable Ground",
+    cost: "",
+    types: ["Land"],
+    rarity: "C",
+    rules: GetTapSymbol$() + ", Take a drink, Sacrifice ~: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+    flavor: "",
+};
+
 var country_club = {
     name: "Country Club",
     cost: "",
@@ -125,6 +134,7 @@ var wine_lounge = {
 
 var LANDS = [
     city_of_class,
+    unstable_ground,
 
     // ETB Drink 2 or tapped
     // wu

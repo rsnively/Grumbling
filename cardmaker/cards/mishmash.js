@@ -359,7 +359,7 @@ var hair_of_the_dog = {
 var happy_hour = {
     name: "Happy Hour",
     cost: "1RR",
-    types: "Enchantment",
+    types: ["Enchantment"],
     rarity: "R",
     rules: "If a player would take one or more drinks, they instead take that many drinks plus one.",
 };
@@ -760,12 +760,12 @@ var wingman = {
 };
 
 var wizards_staff = {
-    name: "Wizard's Staff",
-    cost: "3",
+    name: "Wizard&#39s Staff",
+    cost: "4",
     supertypes: ["Legendary"],
     types: ["Artifact"],
     rarity: "R",
-    rules: "Whenever you take one or more drinks, put that many charge counters on ~.<br>" + GetManaSymbol$("3") + ", " + GetTapSymbol$() + ", Remove 10 charge counters from ~: Take an extra turn after this one.",
+    rules: "Whenever you take one or more drinks, put that many charge counters on ~.<br>" + GetManaSymbol$("4") + ", " + GetTapSymbol$() + ", Remove 10 charge counters from ~: Take an extra turn after this one.",
 };
 
 var wrath_of_morning = {

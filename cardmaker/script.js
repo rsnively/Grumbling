@@ -1,245 +1,245 @@
 
-var DesignatedDriver = {
-    name: "Designated Driver",
-    cost: "1RW",
-    types: ["Creature"],
-    subtypes: ["Drunk", "Sober", "Human"],
-    rarity: "U",
-    rules: "Whenever Designated Driver attacks, abstain 1 <span class='reminder'>(Prevent the next 1 drink that would be dealt to you this turn.)</span><br>Whenever Designated Driver deals combat damage to an opponent, each player drinks 1.",
-    power: 3,
-    toughness: 3
-}
+// var DesignatedDriver = {
+//     name: "Designated Driver",
+//     cost: "1RW",
+//     types: ["Creature"],
+//     subtypes: ["Drunk", "Sober", "Human"],
+//     rarity: "U",
+//     rules: "Whenever Designated Driver attacks, abstain 1 <span class='reminder'>(Prevent the next 1 drink that would be dealt to you this turn.)</span><br>Whenever Designated Driver deals combat damage to an opponent, each player drinks 1.",
+//     power: 3,
+//     toughness: 3
+// }
 
-var BackalleyBeerman = {
-    name: "Backalley Beerman",
-    cost: "2B",
-    types: ["Creature"],
-    subtypes: ["Drunk", "Rogue"],
-    rarity: "C",
-    rules: "When Backalley Beerman dies, you may drink 1. If you do, put a +1/+1 counter on target creature.",
-    power: 3,
-    toughness: 2
-};
-var BeerBong = {
-    name: "Beer Bong",
-    cost: "3",
-    types: ["Artifact"],
-    subtypes: ["Equipment"],
-    rarity: "R",
-    rules: "Equipped creature gets shotguntouch. <span class='reminder'>(When this creature deals damage to a player, that player shotguns a beer.)</span><br>Equip " + GetManaSymbol$("4")
-};
-var BigBird = {
-    name: "Big Bird",
-    cost: "4W",
-    types: ["Creature"],
-    subtypes: ["Sober", "Bird"],
-    rarity: "C",
-    rules: "Flying, vigilance<br>Whenever Big Bird attacks, Abstain 1. <span class='reminder'>(Prevent the next 1 drink that would be dealt to you this turn.)</span>",
-    power: 3,
-    toughness: 3
-};
-var BigSlurp = {
-    name: "Big Slurp",
-    cost: "3R",
-    types: ["Sorcery"],
-    rarity: "C",
-    rules: "Big slurp deals 4 damage to target player. That player drinks 4."
-};
-var BoomRoasted = {
-    name: "Boom! Roasted",
-    cost: "1R",
-    types: ["Sorcery"],
-    rarity: "C",
-    rules: "Boom! Roasted deals 5 damage to target non-drunk creature."
-};
-var Brid = {
-    name: "Brid",
-    cost: "2W",
-    types: ["Creature"],
-    subtypes: ["Bird"],
-    rarity: "C",
-    rules: "Flying",
-    power: 2,
-    toughness: 2
-};
-var BubblingStout = {
-    name: "Bubbling Stout",
-    cost: "1",
-    types: ["Artifact"],
-    subtypes: ["Beer"],
-    rarity: "U",
-    rules: GetTapSymbol$() + ", " + GetManaSymbol$("1") + GetManaSymbol$("B") + ": Each player loses X life and you gain X life, where X is the number of Beers you control."
-};
-var DiligentBouncer = {
-    name: "Diligent Bouncer",
-    cost: "2W",
-    types: ["Creature"],
-    subtypes: ["Sober", "Human"],
-    rarity: "C",
-    rules: "Flash<br>When Diligent Bouncer enters the battlefield, Abstain 1. <span class='reminder'>(Prevent the next 1 drink that would be dealt to you this turn.)</span>",
-    power: 1,
-    toughness: 4
-};
-var DrownYourSorrows = {
-    name: "Drown Your Sorrows",
-    cost: "2B",
-    types: ["Sorcery"],
-    rarity: "U",
-    rules: "As an additional cost to cast Drown Your Sorrows, drink X. Target creature gets -X/-X until end of turn.",
-};
-var DrunkenPillaging = {
-    name: "Drunken Pillaging",
-    cost: "R",
-    types: ["Sorcery"],
-    rarity: "C",
-    rules: "Draw two cards, then discard two cards.<br>Flashback " + GetManaSymbol$("2") + GetManaSymbol$("R") + ", Drink 1 <span class='reminder'>(You may cast this card from your graveyard for its flashback cost. Then exile it.)</span>"
-};
-var FinishOff = {
-    name: "Finish Off",
-    cost: "1W",
-    types: ["Instant"],
-    rarity: "C",
-    rules: "Destroy target artifact or enchantment. If it's an untapped beer, you drink 1 and gain 2 lfe.",
-};
-var Forty = {
-    name: "Forty",
-    cost: "1",
-    types: ["Artifact"],
-    subtypes: ["Beer"],
-    rarity: "U",
-    rules: GetTapSymbol$() + ", " + GetManaSymbol$("1") + GetManaSymbol$("R") + ": Each player drinks X, where X is the number of Beers you control."
-};
-var GoblinBarsonist = {
-    name: "Goblin Barsonist",
-    cost: "R",
-    types: ["Creature"],
-    subtypes: ["Goblin"],
-    rarity: "C",
-    rules: "When Goblin Barsonist dies, it deals 1 drink to target player.",
-    power: 1,
-    toughness: 1
-};
-var IgnitionInterlockDevice = {
-    name: "Ignition Interlock Device",
-    cost: "1W",
-    types: ["Enchantment"],
-    subtypes: ["Aura"],
-    rarity: "C",
-    rules: "Enchant creature<br>Enchanted creature can't attack or block if it's controller has taken a drink this turn."
-};
-var InsistentImp = {
-    name: "Insistent Imp",
-    cost: "2R",
-    types: ["Creature"],
-    subtypes: ["Devil"],
-    rarity: "C",
-    rules: "Drinktouch <span class='reminder'>(Whenever this creature deals damage to a player, that player drinks 1.)</span>",
-    power: 3,
-    toughness: 2
-};
-var LightBeer = {
-    name: "Light Beer",
-    cost: "1",
-    types: ["Artifact"],
-    subtypes: ["Beer"],
-    rarity: "U",
-    rules: GetTapSymbol$() + ", " + GetManaSymbol$("1") + GetManaSymbol$("G") + ": Target creature gets +X/+X until end of turn, where X is the number of Beers you control."
-}
-var MonkBrewedIPA = {
-    name: "Monk-Brewed IPA",
-    cost: "1",
-    types: ["Artifact"],
-    subtypes: ["Beer"],
-    rarity: "U",
-    rules: GetTapSymbol$() + ", " + GetManaSymbol$("1") + GetManaSymbol$("U") + ": Scry X, where X is the number of Beers you control."
-};
-var NonAlcoholicBeer = {
-    name: "Non-Alcoholic Beer",
-    cost: "1",
-    types: ["Artifact"],
-    subtypes: ["Beer"],
-    rarity: "U",
-    rules: GetTapSymbol$() + ", " + GetManaSymbol$("1") + GetManaSymbol$("W") + ": Abstain X, where X is the number of Beers you control. <span class='reminder'>(Prevent the next X drinks that would be dealt to you this turn.)</span>"
-};
-var ParoleOfficer = {
-    name: "Parole Officer",
-    cost: "1W",
-    types: ["Creature"],
-    subtypes: ["Sober", "Human"],
-    rarity: "C",
-    rules: "Parole Officer can't be blocked by drunks.",
-    power: 3,
-    toughness: 1
-};
+// var BackalleyBeerman = {
+//     name: "Backalley Beerman",
+//     cost: "2B",
+//     types: ["Creature"],
+//     subtypes: ["Drunk", "Rogue"],
+//     rarity: "C",
+//     rules: "When Backalley Beerman dies, you may drink 1. If you do, put a +1/+1 counter on target creature.",
+//     power: 3,
+//     toughness: 2
+// };
+// var BeerBong = {
+//     name: "Beer Bong",
+//     cost: "3",
+//     types: ["Artifact"],
+//     subtypes: ["Equipment"],
+//     rarity: "R",
+//     rules: "Equipped creature gets shotguntouch. <span class='reminder'>(When this creature deals damage to a player, that player shotguns a beer.)</span><br>Equip " + GetManaSymbol$("4")
+// };
+// var BigBird = {
+//     name: "Big Bird",
+//     cost: "4W",
+//     types: ["Creature"],
+//     subtypes: ["Sober", "Bird"],
+//     rarity: "C",
+//     rules: "Flying, vigilance<br>Whenever Big Bird attacks, Abstain 1. <span class='reminder'>(Prevent the next 1 drink that would be dealt to you this turn.)</span>",
+//     power: 3,
+//     toughness: 3
+// };
+// var BigSlurp = {
+//     name: "Big Slurp",
+//     cost: "3R",
+//     types: ["Sorcery"],
+//     rarity: "C",
+//     rules: "Big slurp deals 4 damage to target player. That player drinks 4."
+// };
+// var BoomRoasted = {
+//     name: "Boom! Roasted",
+//     cost: "1R",
+//     types: ["Sorcery"],
+//     rarity: "C",
+//     rules: "Boom! Roasted deals 5 damage to target non-drunk creature."
+// };
+// var Brid = {
+//     name: "Brid",
+//     cost: "2W",
+//     types: ["Creature"],
+//     subtypes: ["Bird"],
+//     rarity: "C",
+//     rules: "Flying",
+//     power: 2,
+//     toughness: 2
+// };
+// var BubblingStout = {
+//     name: "Bubbling Stout",
+//     cost: "1",
+//     types: ["Artifact"],
+//     subtypes: ["Beer"],
+//     rarity: "U",
+//     rules: GetTapSymbol$() + ", " + GetManaSymbol$("1") + GetManaSymbol$("B") + ": Each player loses X life and you gain X life, where X is the number of Beers you control."
+// };
+// var DiligentBouncer = {
+//     name: "Diligent Bouncer",
+//     cost: "2W",
+//     types: ["Creature"],
+//     subtypes: ["Sober", "Human"],
+//     rarity: "C",
+//     rules: "Flash<br>When Diligent Bouncer enters the battlefield, Abstain 1. <span class='reminder'>(Prevent the next 1 drink that would be dealt to you this turn.)</span>",
+//     power: 1,
+//     toughness: 4
+// };
+// var DrownYourSorrows = {
+//     name: "Drown Your Sorrows",
+//     cost: "2B",
+//     types: ["Sorcery"],
+//     rarity: "U",
+//     rules: "As an additional cost to cast Drown Your Sorrows, drink X. Target creature gets -X/-X until end of turn.",
+// };
+// var DrunkenPillaging = {
+//     name: "Drunken Pillaging",
+//     cost: "R",
+//     types: ["Sorcery"],
+//     rarity: "C",
+//     rules: "Draw two cards, then discard two cards.<br>Flashback " + GetManaSymbol$("2") + GetManaSymbol$("R") + ", Drink 1 <span class='reminder'>(You may cast this card from your graveyard for its flashback cost. Then exile it.)</span>"
+// };
+// var FinishOff = {
+//     name: "Finish Off",
+//     cost: "1W",
+//     types: ["Instant"],
+//     rarity: "C",
+//     rules: "Destroy target artifact or enchantment. If it's an untapped beer, you drink 1 and gain 2 lfe.",
+// };
+// var Forty = {
+//     name: "Forty",
+//     cost: "1",
+//     types: ["Artifact"],
+//     subtypes: ["Beer"],
+//     rarity: "U",
+//     rules: GetTapSymbol$() + ", " + GetManaSymbol$("1") + GetManaSymbol$("R") + ": Each player drinks X, where X is the number of Beers you control."
+// };
+// var GoblinBarsonist = {
+//     name: "Goblin Barsonist",
+//     cost: "R",
+//     types: ["Creature"],
+//     subtypes: ["Goblin"],
+//     rarity: "C",
+//     rules: "When Goblin Barsonist dies, it deals 1 drink to target player.",
+//     power: 1,
+//     toughness: 1
+// };
+// var IgnitionInterlockDevice = {
+//     name: "Ignition Interlock Device",
+//     cost: "1W",
+//     types: ["Enchantment"],
+//     subtypes: ["Aura"],
+//     rarity: "C",
+//     rules: "Enchant creature<br>Enchanted creature can't attack or block if it's controller has taken a drink this turn."
+// };
+// var InsistentImp = {
+//     name: "Insistent Imp",
+//     cost: "2R",
+//     types: ["Creature"],
+//     subtypes: ["Devil"],
+//     rarity: "C",
+//     rules: "Drinktouch <span class='reminder'>(Whenever this creature deals damage to a player, that player drinks 1.)</span>",
+//     power: 3,
+//     toughness: 2
+// };
+// var LightBeer = {
+//     name: "Light Beer",
+//     cost: "1",
+//     types: ["Artifact"],
+//     subtypes: ["Beer"],
+//     rarity: "U",
+//     rules: GetTapSymbol$() + ", " + GetManaSymbol$("1") + GetManaSymbol$("G") + ": Target creature gets +X/+X until end of turn, where X is the number of Beers you control."
+// }
+// var MonkBrewedIPA = {
+//     name: "Monk-Brewed IPA",
+//     cost: "1",
+//     types: ["Artifact"],
+//     subtypes: ["Beer"],
+//     rarity: "U",
+//     rules: GetTapSymbol$() + ", " + GetManaSymbol$("1") + GetManaSymbol$("U") + ": Scry X, where X is the number of Beers you control."
+// };
+// var NonAlcoholicBeer = {
+//     name: "Non-Alcoholic Beer",
+//     cost: "1",
+//     types: ["Artifact"],
+//     subtypes: ["Beer"],
+//     rarity: "U",
+//     rules: GetTapSymbol$() + ", " + GetManaSymbol$("1") + GetManaSymbol$("W") + ": Abstain X, where X is the number of Beers you control. <span class='reminder'>(Prevent the next X drinks that would be dealt to you this turn.)</span>"
+// };
+// var ParoleOfficer = {
+//     name: "Parole Officer",
+//     cost: "1W",
+//     types: ["Creature"],
+//     subtypes: ["Sober", "Human"],
+//     rarity: "C",
+//     rules: "Parole Officer can't be blocked by drunks.",
+//     power: 3,
+//     toughness: 1
+// };
 
-var Shocktop = {
-    name: "Shocktop",
-    cost: "R",
-    types: ["Instant"],
-    rarity: "C",
-    rules: "Shocktop deals 2 damage to target creature or player. Target player drinks 1."
-};
-var SulbeericVortex = {
-    name: "Sulbeeric Vortex",
-    cost: "1RR",
-    types: ["Enchantment"],
-    rarity: "U",
-    rules: "At the beginning of each player's upkeep, that player loses 2 life and drinks 1."
-};
-var TheWheel = {
-    name: "The Wheel",
-    cost: "5",
-    types: ["Artifact"],
-    rarity: "R",
-    rules: "At the beginning of your upkeep, you may pay " + GetManaSymbol$("W") + GetManaSymbol$("U") + GetManaSymbol$("B") + GetManaSymbol$("R") + GetManaSymbol$("G") + ". If you do, target player takes a shot."
-};
-var ThirstyMarauder = {
-    name: "Thirsty Marauder",
-    cost: "1R",
-    types: ["Creature"],
-    subtypes: ["Drunk", "Warrior"],
-    rarity: "C",
-    rules: "Whenever Thirsty Marauder attacks, you may drink 1. If you do, it gets +2/+0 until end of turn.",
-    power: 1,
-    toughness: 2
-};
-var VampireEnabler = {
-    name: "Vampire Enabler",
-    cost: "1BB",
-    types: ["Creature"],
-    subtypes: ["Vampire"],
-    rarity: "U",
-    rules: "Flying, lifelink<br>Drinktouch <span class='reminder'>(Whenever this creature deals damage to a player, that player drinks 1.)</span>",
-    power: 2,
-    toughness: 3
-};
-var WizardsStaff = {
-    name: "Wizard&#39;s Staff",
-    cost: "3",
-    types: ["Artifact"],
-    rarity: "R",
-    rules: GetTapSymbol$() + ", Shotgun a beer: Put a drink counter on Wizard's Staff.<br>" + GetTapSymbol$() + ": Gain control of target creature with converted mana cost less than or equal to the number of drink counters on Wizard's Staff."
-};
-var YokedCrab = {
-    name: "Yoked Crab",
-    cost: "2U",
-    types: ["Creature"],
-    subtypes: ["Crab"],
-    rarity: "C",
-    flavor: "\"Dude. Crab's yoked.\"",
-    power: 1,
-    toughness: 4
-};
-var YokedIguana = {
-    name: "Yoked Iguana",
-    cost: "3R",
-    types: ["Creature"],
-    subtypes: ["Lizard"],
-    rarity: "C",
-    flavor: "\"Bruh.\"",
-    power: 4,
-    toughness: 2
-};
+// var Shocktop = {
+//     name: "Shocktop",
+//     cost: "R",
+//     types: ["Instant"],
+//     rarity: "C",
+//     rules: "Shocktop deals 2 damage to target creature or player. Target player drinks 1."
+// };
+// var SulbeericVortex = {
+//     name: "Sulbeeric Vortex",
+//     cost: "1RR",
+//     types: ["Enchantment"],
+//     rarity: "U",
+//     rules: "At the beginning of each player's upkeep, that player loses 2 life and drinks 1."
+// };
+// var TheWheel = {
+//     name: "The Wheel",
+//     cost: "5",
+//     types: ["Artifact"],
+//     rarity: "R",
+//     rules: "At the beginning of your upkeep, you may pay " + GetManaSymbol$("W") + GetManaSymbol$("U") + GetManaSymbol$("B") + GetManaSymbol$("R") + GetManaSymbol$("G") + ". If you do, target player takes a shot."
+// };
+// var ThirstyMarauder = {
+//     name: "Thirsty Marauder",
+//     cost: "1R",
+//     types: ["Creature"],
+//     subtypes: ["Drunk", "Warrior"],
+//     rarity: "C",
+//     rules: "Whenever Thirsty Marauder attacks, you may drink 1. If you do, it gets +2/+0 until end of turn.",
+//     power: 1,
+//     toughness: 2
+// };
+// var VampireEnabler = {
+//     name: "Vampire Enabler",
+//     cost: "1BB",
+//     types: ["Creature"],
+//     subtypes: ["Vampire"],
+//     rarity: "U",
+//     rules: "Flying, lifelink<br>Drinktouch <span class='reminder'>(Whenever this creature deals damage to a player, that player drinks 1.)</span>",
+//     power: 2,
+//     toughness: 3
+// };
+// var WizardsStaff = {
+//     name: "Wizard&#39;s Staff",
+//     cost: "3",
+//     types: ["Artifact"],
+//     rarity: "R",
+//     rules: GetTapSymbol$() + ", Shotgun a beer: Put a drink counter on Wizard's Staff.<br>" + GetTapSymbol$() + ": Gain control of target creature with converted mana cost less than or equal to the number of drink counters on Wizard's Staff."
+// };
+// var YokedCrab = {
+//     name: "Yoked Crab",
+//     cost: "2U",
+//     types: ["Creature"],
+//     subtypes: ["Crab"],
+//     rarity: "C",
+//     flavor: "\"Dude. Crab's yoked.\"",
+//     power: 1,
+//     toughness: 4
+// };
+// var YokedIguana = {
+//     name: "Yoked Iguana",
+//     cost: "3R",
+//     types: ["Creature"],
+//     subtypes: ["Lizard"],
+//     rarity: "C",
+//     flavor: "\"Bruh.\"",
+//     power: 4,
+//     toughness: 2
+// };
 
 //Red commons TODO
 // - big creature (4/5 upside for 5?)
@@ -279,7 +279,11 @@ function GetBackground$(card) {
     var base = "";
     var color = GetColor(card);
     if (card.types.includes("Land")) {
-        base = "multicolor_noncreature";
+        if (card.name == "Brewcycle" || card.name == "Darksteel Tavern") {
+            base = "artifact_noncreature"
+        } else {
+            base = "multicolor_noncreature";
+        }
     }
     else if (card.types.includes("Creature")) {
         if (color == "W") base = "white_creature";

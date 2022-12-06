@@ -1,3 +1,11 @@
+var brewcycle = {
+    name: "Brewcycle",
+    cost: "",
+    types: ["Land"],
+    rarity: "R",
+    rules: GetTapSymbol$() + ": Add " + GetManaSymbol$("C") + "<br>" + GetManaSymbol$("2") + ", Take 2 drinks: ~ becomes a 2/2 creature with all creature types until end of turn. It's still a land.",
+};
+
 var city_of_class = {
     name: "City of Class",
     cost: "",
@@ -5,6 +13,14 @@ var city_of_class = {
     rarity: "R",
     rules: "Whenever ~ becomes tapped, take a drink.<br><br>" + GetTapSymbol$() + ": Add one mana of any color.",
     flavor: "",
+};
+
+var darksteel_tavern = {
+    name: "Darksteel Tavern",
+    cost: "",
+    types: ["Artifact", "Land"],
+    rarity: "U",
+    rules: "Indestructible<br>When ~ enters the battlefield, target player takes a drink.<br>" + GetTapSymbol$() + ": Add " + GetManaSymbol$("C") + ".",
 };
 
 var unstable_ground = {
@@ -41,7 +57,7 @@ var fermenting_caverns = {
 };
 
 var festive_campground = {
-    name: "Lazy River",
+    name: "Festive Campground",
     cost: "",
     types: ["Land"],
     rarity: "C",
@@ -66,7 +82,7 @@ var lazy_river = {
 };
 
 var murky_lagoon = {
-    name: "Picnic Clearing",
+    name: "Murky Lagoon",
     cost: "",
     types: ["Land"],
     rarity: "C",
@@ -133,7 +149,9 @@ var wine_lounge = {
 };
 
 var LANDS = [
+    brewcycle,
     city_of_class,
+    darksteel_tavern,
     unstable_ground,
 
     // ETB Drink 2 or tapped

@@ -364,8 +364,8 @@ var happy_hour = {
     rules: "If a player would take one or more drinks, they instead take that many drinks plus one.",
 };
 
-var hangover_cure = {
-    name: "Hangover Cure",
+var liquid_strength = {
+    name: "Liquid Strength",
     cost: "1G",
     types: ["Instant"],
     rarity: "C",
@@ -388,18 +388,18 @@ var hip_flask = {
     cost: "2",
     types: ["Artifact"],
     rarity: "U",
-    rules: GetTapSymbol$() + ": Add " + GetManaSymbol$("C") + ".<br><br>" + GetManaSymbol$("2") + ", " + GetTapSymbol$() + ", Take a drink: Draw a card.",
+    rules: GetTapSymbol$() + ": Add " + GetManaSymbol$("C") + ".<br><br>" + GetManaSymbol$("2") + ", " + GetTapSymbol$() + ", Take a drink, Sacrifice ~: Draw a card.",
 };
 
 var hype_man = {
     name: "Hype Man",
     cost: "1GW",
     types: ["Creature"],
-    subtypes: ["Human"],
+    subtypes: ["Human", "Bard"],
     rarity: "U",
-    rules: "Reach<br><br>Whenever you drink, create a 1/1 white Soldier creature token.",
-    power: 0,
-    toughness: 4,
+    rules: "Reach " + GetReachReminderText$() + "<br>Whenever you drink, create a 1/1 white Soldier creature token.",
+    power: 2,
+    toughness: 2,
 };
 
 var imbibe = {
@@ -495,8 +495,8 @@ var liquored_up = {
     rules: "Enchant creature<br>When ~ enters the battlefield, take drinks equal to enchanted creature's mana value.<br>You control enchanted creature.",
 };
 
-var monastery_brewmaster = {
-    name: "Monastery Brewmaster",
+var monastery_brewmaker = {
+    name: "Monastery Brewmaker",
     cost: "R",
     types: ["Creature"],
     subtypes: ["Human", "Monk"],
@@ -825,7 +825,6 @@ var MISHMASH = [
     gambool,
     goblin_sommelier,
     hair_of_the_dog,
-    hangover_cure,
     happy_hour,
     high_functioning_alcoholic,
     hip_flask,
@@ -838,9 +837,10 @@ var MISHMASH = [
     last_call,
     let_it_breathe,
     lightning_breath,
+    liquid_strength,
     liquor_license,
     liquored_up,
-    monastery_brewmaster,
+    monastery_brewmaker,
     mull,
     open_bar,
     partner_in_crime,
